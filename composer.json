@@ -2,7 +2,7 @@
   "name": "surfcamp/theme-upside-down",
   "type": "typo3-cms-extension",
   "description": "Custom TYPO3 theme — Upside Down visual language, with full DDEV dev environment.",
-  "license": "GPL-2.0-or-later",
+  "license": "GPL-3.0-or-later",
   "autoload": {
     "psr-4": {
       "Surfcamp\\ThemeUpsideDown\\": "Classes/"

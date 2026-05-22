@@ -133,4 +133,4 @@ Seven custom content element types extend `tt_content`:
 
 ## License
 
-GPL-2.0-or-later — see [LICENSE](LICENSE).
+GPL-3.0-or-later — see [LICENSE](LICENSE).
