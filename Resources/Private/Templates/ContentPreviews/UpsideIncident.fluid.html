@@ -2,7 +2,20 @@
     xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
     data-namespace-typo3-fluid="true"
 >
-<details class="ud-accordion__item" style="max-width: 480px;" open>
+<style>
+.ud-accordion__item            { border: 1px solid #1a2d3e; border-radius: 0.75rem; max-width: 480px; font-family: system-ui, sans-serif; color: #e8eff6; overflow: hidden; }
+.ud-accordion__trigger         { display: flex; align-items: center; gap: 0.6rem; padding: 0.9rem 1.1rem; cursor: default; list-style: none; }
+.ud-accordion__trigger::-webkit-details-marker { display: none; }
+.ud-accordion__id              { font-size: 0.66rem; font-family: monospace; letter-spacing: 0.1em; color: #2dbfb0; border: 1px solid #2dbfb0; border-radius: 4px; padding: 0.1rem 0.4rem; white-space: nowrap; }
+.ud-accordion__label           { flex: 1; font-size: 0.9rem; font-weight: 600; color: #e8eff6; }
+.ud-accordion__date            { font-size: 0.72rem; color: #d3dbff; font-family: monospace; white-space: nowrap; }
+.ud-accordion__panel           { border-top: 1px solid #1a2d3e; }
+.ud-accordion__panel-inner     { padding: 0.75rem 1.1rem 0.9rem; }
+.ud-accordion__classification  { display: inline-block; font-size: 0.66rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #e84055; border: 1px solid rgba(232,64,85,0.4); border-radius: 4px; padding: 0.1rem 0.45rem; margin-bottom: 0.4rem; }
+.ud-accordion__panel-inner > p { font-size: 0.82rem; color: #d3dbff; margin: 0; line-height: 1.5; }
+</style>
+
+<details class="ud-accordion__item" style="background:#0f1c27;" open>
   <summary class="ud-accordion__trigger">
     <f:if condition="{record.tx_themeupsidedown_incident_id}">
       <span class="ud-accordion__id">{record.tx_themeupsidedown_incident_id}</span>
@@ -18,7 +31,7 @@
         <span class="ud-accordion__classification">{record.tx_themeupsidedown_incident_classification}</span>
       </f:if>
       <f:if condition="{record.bodytext}">
-        <p style="font-size: 0.82rem; color: var(--ud-text-muted, #d3dbff); margin: 0.5rem 0 0; line-height: 1.5;">{record.bodytext -> f:format.stripTags() -> f:format.crop(maxCharacters: 140)}</p>
+        <p>{record.bodytext -> f:format.stripTags() -> f:format.crop(maxCharacters: 140)}</p>
       </f:if>
     </div>
   </div>

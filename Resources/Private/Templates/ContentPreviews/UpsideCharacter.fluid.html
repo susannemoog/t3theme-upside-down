@@ -2,6 +2,22 @@
     xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
     data-namespace-typo3-fluid="true"
 >
+<style>
+.ud-character-card { border: 1px solid #1a2d3e; border-top: 3px solid #c41c35; border-radius: 0.75rem; padding: 1.2rem 1.2rem 1rem; max-width: 280px; color: #e8eff6; font-family: system-ui, sans-serif; }
+.ud-character-card[data-status="alive"]       { border-top-color: #2dbfb0; }
+.ud-character-card[data-status="missing"]     { border-top-color: #f5c842; }
+.ud-character-card[data-status="compromised"] { border-top-color: #c41c35; }
+.ud-character-card__role    { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: #2dbfb0; display: block; margin-bottom: 0.3rem; }
+.ud-character-card__name    { margin: 0 0 0.2rem; font-size: 1.15rem; color: #e8eff6; }
+.ud-character-card__faction { font-size: 0.76rem; color: #e84055; text-transform: uppercase; letter-spacing: 0.09em; margin: 0 0 0.5rem; }
+.ud-character-card__bio     { font-size: 0.82rem; color: #d3dbff; line-height: 1.5; margin: 0 0 0.75rem; }
+.ud-character-card__status  { display: inline-block; padding: 0.2rem 0.55rem; border-radius: 999px; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; border: 1px solid currentColor; }
+.ud-status--alive       { color: #2dbfb0; background: rgba(45,191,176,0.12); }
+.ud-status--missing     { color: #f5c842; background: rgba(245,200,66,0.10); }
+.ud-status--compromised { color: #e84055; background: rgba(232,64,85,0.10); }
+.ud-status--unknown     { color: #d3dbff; background: rgba(211,219,255,0.08); }
+</style>
+
 <f:variable name="statusLabel">
   <f:switch expression="{record.tx_themeupsidedown_character_status}">
     <f:case value="alive">Alive</f:case>
@@ -11,7 +27,7 @@
   </f:switch>
 </f:variable>
 
-<article class="ud-character-card" data-status="{record.tx_themeupsidedown_character_status}" style="max-width: 280px;">
+<article class="ud-character-card" data-status="{record.tx_themeupsidedown_character_status}" style="background:#0f1c27;">
   <f:if condition="{record.subheader}">
     <span class="ud-character-card__role">{record.subheader}</span>
   </f:if>

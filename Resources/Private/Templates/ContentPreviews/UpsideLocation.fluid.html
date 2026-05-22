@@ -2,6 +2,20 @@
     xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
     data-namespace-typo3-fluid="true"
 >
+<style>
+.ud-location-card          { border: 1px solid #1a2d3e; border-radius: 0.75rem; overflow: hidden; max-width: 320px; font-family: system-ui, sans-serif; color: #e8eff6; }
+.ud-location-card--featured { border-color: #c41c35; box-shadow: 0 0 16px rgba(196,28,53,0.2); }
+.ud-location-card__image   { width: 100%; height: 100px; object-fit: cover; display: block; opacity: 0.65; }
+.ud-location-card__body    { padding: 1rem 1.1rem; }
+.ud-location-card__name    { margin: 0 0 0.3rem; font-size: 1rem; color: #e8eff6; }
+.ud-location-card__coords  { font-size: 0.72rem; color: #2dbfb0; font-family: monospace; display: block; margin-bottom: 0.4rem; }
+.ud-location-card__desc    { font-size: 0.82rem; color: #d3dbff; margin: 0 0 0.6rem; line-height: 1.5; }
+.ud-location-card__threat  { display: inline-block; padding: 0.2rem 0.55rem; border-radius: 999px; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; border: 1px solid currentColor; }
+.ud-threat--nominal  { color: #2dbfb0; background: rgba(45,191,176,0.12); }
+.ud-threat--elevated { color: #f5c842; background: rgba(245,200,66,0.10); }
+.ud-threat--critical { color: #e84055; background: rgba(232,64,85,0.10); }
+</style>
+
 <f:variable name="threatLabel">
   <f:switch expression="{record.tx_themeupsidedown_location_threat}">
     <f:case value="nominal">Nominal</f:case>
@@ -11,14 +25,17 @@
   </f:switch>
 </f:variable>
 
-<article class="ud-location-card{f:if(condition: record.tx_themeupsidedown_location_featured, then: ' ud-location-card--featured')}" style="max-width: 320px;">
-  <div class="ud-location-card__body" style="padding: 1.1rem;">
+<article class="ud-location-card{f:if(condition: record.tx_themeupsidedown_location_featured, then: ' ud-location-card--featured')}" style="background:#0f1c27;">
+  <f:if condition="{record.assets -> f:count()} > 0">
+    <f:image image="{record.assets.0}" maxWidth="320" maxHeight="100" alt="" class="ud-location-card__image" />
+  </f:if>
+  <div class="ud-location-card__body">
     <h3 class="ud-location-card__name">{record.header}</h3>
     <f:if condition="{record.tx_themeupsidedown_location_coords}">
       <code class="ud-location-card__coords">{record.tx_themeupsidedown_location_coords}</code>
     </f:if>
     <f:if condition="{record.bodytext}">
-      <p class="ud-location-card__desc" style="margin-top: 0.5rem;">{record.bodytext -> f:format.stripTags() -> f:format.crop(maxCharacters: 100)}</p>
+      <p class="ud-location-card__desc">{record.bodytext -> f:format.stripTags() -> f:format.crop(maxCharacters: 100)}</p>
     </f:if>
     <span class="ud-location-card__threat ud-threat--{record.tx_themeupsidedown_location_threat}">{threatLabel}</span>
   </div>

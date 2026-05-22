@@ -2,15 +2,22 @@
     xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
     data-namespace-typo3-fluid="true"
 >
+<style>
+.ud-storybeat-preview        { border: 1px solid #5c2c8a; border-radius: 0.5rem; padding: 0.9rem 1.1rem; max-width: 480px; font-family: system-ui, sans-serif; color: #f6ecff; }
+.ud-storybeat-preview__title { font-size: 0.96rem; font-weight: 700; color: #f6ecff; margin: 0 0 0.25rem; }
+.ud-storybeat-preview__sub   { font-size: 0.82rem; color: rgba(246,236,255,0.8); margin: 0 0 0.4rem; }
+.ud-storybeat-preview__body  { font-size: 0.82rem; color: rgba(246,236,255,0.85); line-height: 1.5; margin: 0; }
+</style>
 
-<div style="padding: 12px; border: 1px solid #5c2c8a; border-radius: 8px; background: #180d28; color: #f6ecff;">
-  <strong>{record.header}</strong>
+<div class="ud-storybeat-preview" style="background:#180d28;">
+  <f:if condition="{record.header}">
+    <p class="ud-storybeat-preview__title">{record.header}</p>
+  </f:if>
   <f:if condition="{record.subheader}">
-    <div style="opacity: 0.8; margin-top: 4px;">{record.subheader}</div>
+    <p class="ud-storybeat-preview__sub">{record.subheader}</p>
   </f:if>
   <f:if condition="{record.bodytext}">
-    <div style="margin-top: 8px; opacity: 0.9;">{record.bodytext -> f:format.stripTags() -> f:format.crop(maxCharacters: 160)}</div>
+    <p class="ud-storybeat-preview__body">{record.bodytext -> f:format.stripTags() -> f:format.crop(maxCharacters: 160)}</p>
   </f:if>
 </div>
-
 </html>

@@ -24,9 +24,8 @@ test.describe('Backend previews', () => {
   // ── Hero ──────────────────────────────────────────────────────────────────────
 
   test('hero preview renders eyebrow and title', async ({ page }) => {
-    const preview = page.locator('.t3-page-ce').filter({ has: page.locator('h1') }).first();
+    const preview = page.locator('.ud-hero-preview').first();
     await expect(preview).toBeVisible();
-    // The hero template uses inline styles, not CSS classes — check text content
     await expect(preview).toContainText('The Upside Down');
     await expect(preview).toContainText('Hawkins National Laboratory');
   });

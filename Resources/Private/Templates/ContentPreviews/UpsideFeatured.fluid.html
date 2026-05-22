@@ -2,19 +2,35 @@
     xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
     data-namespace-typo3-fluid="true"
 >
-<div class="ud-featured__card" style="max-width: 480px;">
-  <div class="ud-featured__body" style="padding: 1.2rem;">
+<style>
+.ud-featured__card   { border: 1px solid #1a2d3e; border-radius: 0.75rem; overflow: hidden; max-width: 480px; font-family: system-ui, sans-serif; display: flex; gap: 0; }
+.ud-featured__visual { flex: 0 0 120px; overflow: hidden; position: relative; }
+.ud-featured__visual img { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; display: block; }
+.ud-featured__body      { flex: 1; padding: 1.2rem; }
+.ud-featured__dispatch  { font-size: 0.66rem; letter-spacing: 0.18em; text-transform: uppercase; color: #e84055; display: block; margin-bottom: 0.6rem; font-family: monospace; }
+.ud-featured__title     { margin: 0 0 0.6rem; font-size: 1.1rem; color: #e8eff6; line-height: 1.2; }
+.ud-featured__body > p  { font-size: 0.82rem; color: #d3dbff; margin: 0 0 0.6rem; line-height: 1.5; }
+.ud-featured__cta       { font-size: 0.78rem; font-weight: 700; color: #2dbfb0; text-transform: uppercase; letter-spacing: 0.12em; }
+</style>
+
+<div class="ud-featured__card" style="background:#0f1c27;">
+  <f:if condition="{record.assets -> f:count()} > 0">
+    <div class="ud-featured__visual">
+      <f:image image="{record.assets.0}" maxWidth="120" maxHeight="180" alt="" />
+    </div>
+  </f:if>
+  <div class="ud-featured__body">
     <f:if condition="{record.header}">
       <span class="ud-featured__dispatch">{record.header}</span>
     </f:if>
     <f:if condition="{record.subheader}">
-      <h2 class="ud-featured__title" style="font-size: 1.1rem; margin: 0.4rem 0;">{record.subheader}</h2>
+      <h2 class="ud-featured__title">{record.subheader}</h2>
     </f:if>
     <f:if condition="{record.bodytext}">
-      <p style="font-size: 0.82rem; color: var(--ud-text-muted, #d3dbff); margin: 0.4rem 0; line-height: 1.5;">{record.bodytext -> f:format.stripTags() -> f:format.crop(maxCharacters: 100)}</p>
+      <p>{record.bodytext -> f:format.stripTags() -> f:format.crop(maxCharacters: 100)}</p>
     </f:if>
     <f:if condition="{record.tx_themeupsidedown_cta_label}">
-      <span class="ud-featured__cta" style="font-size: 0.82rem;">{record.tx_themeupsidedown_cta_label} →</span>
+      <span class="ud-featured__cta">{record.tx_themeupsidedown_cta_label} →</span>
     </f:if>
   </div>
 </div>
