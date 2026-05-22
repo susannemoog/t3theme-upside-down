@@ -4,21 +4,21 @@
 >
 <details class="ud-accordion__item" style="max-width: 480px;" open>
   <summary class="ud-accordion__trigger">
-    <f:if condition="{data.tx_themeupsidedown_incident_id}">
-      <span class="ud-accordion__id">{data.tx_themeupsidedown_incident_id}</span>
+    <f:if condition="{record.tx_themeupsidedown_incident_id}">
+      <span class="ud-accordion__id">{record.tx_themeupsidedown_incident_id}</span>
     </f:if>
-    <span class="ud-accordion__label">{data.header}</span>
-    <f:if condition="{data.tx_themeupsidedown_incident_date}">
-      <span class="ud-accordion__date">{data.tx_themeupsidedown_incident_date}</span>
+    <span class="ud-accordion__label">{record.header}</span>
+    <f:if condition="{record.tx_themeupsidedown_incident_date}">
+      <span class="ud-accordion__date">{record.tx_themeupsidedown_incident_date}</span>
     </f:if>
   </summary>
   <div class="ud-accordion__panel">
     <div class="ud-accordion__panel-inner">
-      <f:if condition="{data.tx_themeupsidedown_incident_classification}">
-        <span class="ud-accordion__classification">{data.tx_themeupsidedown_incident_classification}</span>
+      <f:if condition="{record.tx_themeupsidedown_incident_classification}">
+        <span class="ud-accordion__classification">{record.tx_themeupsidedown_incident_classification}</span>
       </f:if>
-      <f:if condition="{data.bodytext}">
-        <p style="font-size: 0.82rem; color: var(--ud-text-muted, #d3dbff); margin: 0.5rem 0 0; line-height: 1.5;">{data.bodytext -> f:format.stripTags() -> f:format.crop(maxCharacters: 140)}</p>
+      <f:if condition="{record.bodytext}">
+        <p style="font-size: 0.82rem; color: var(--ud-text-muted, #d3dbff); margin: 0.5rem 0 0; line-height: 1.5;">{record.bodytext -> f:format.stripTags() -> f:format.crop(maxCharacters: 140)}</p>
       </f:if>
     </div>
   </div>

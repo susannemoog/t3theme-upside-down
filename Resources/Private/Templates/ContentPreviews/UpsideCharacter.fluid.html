@@ -3,7 +3,7 @@
     data-namespace-typo3-fluid="true"
 >
 <f:variable name="statusLabel">
-  <f:switch expression="{data.tx_themeupsidedown_character_status}">
+  <f:switch expression="{record.tx_themeupsidedown_character_status}">
     <f:case value="alive">Alive</f:case>
     <f:case value="missing">Missing</f:case>
     <f:case value="compromised">Compromised</f:case>
@@ -11,17 +11,17 @@
   </f:switch>
 </f:variable>
 
-<article class="ud-character-card" data-status="{data.tx_themeupsidedown_character_status}" style="max-width: 280px;">
-  <f:if condition="{data.subheader}">
-    <span class="ud-character-card__role">{data.subheader}</span>
+<article class="ud-character-card" data-status="{record.tx_themeupsidedown_character_status}" style="max-width: 280px;">
+  <f:if condition="{record.subheader}">
+    <span class="ud-character-card__role">{record.subheader}</span>
   </f:if>
-  <h3 class="ud-character-card__name">{data.header}</h3>
-  <f:if condition="{data.tx_themeupsidedown_character_faction}">
-    <p class="ud-character-card__faction">{data.tx_themeupsidedown_character_faction}</p>
+  <h3 class="ud-character-card__name">{record.header}</h3>
+  <f:if condition="{record.tx_themeupsidedown_character_faction}">
+    <p class="ud-character-card__faction">{record.tx_themeupsidedown_character_faction}</p>
   </f:if>
-  <f:if condition="{data.bodytext}">
-    <p class="ud-character-card__bio">{data.bodytext -> f:format.stripTags() -> f:format.crop(maxCharacters: 100)}</p>
+  <f:if condition="{record.bodytext}">
+    <p class="ud-character-card__bio">{record.bodytext -> f:format.stripTags() -> f:format.crop(maxCharacters: 100)}</p>
   </f:if>
-  <span class="ud-character-card__status ud-status--{data.tx_themeupsidedown_character_status}">{statusLabel}</span>
+  <span class="ud-character-card__status ud-status--{record.tx_themeupsidedown_character_status}">{statusLabel}</span>
 </article>
 </html>

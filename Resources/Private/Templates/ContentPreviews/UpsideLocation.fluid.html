@@ -3,24 +3,24 @@
     data-namespace-typo3-fluid="true"
 >
 <f:variable name="threatLabel">
-  <f:switch expression="{data.tx_themeupsidedown_location_threat}">
+  <f:switch expression="{record.tx_themeupsidedown_location_threat}">
     <f:case value="nominal">Nominal</f:case>
     <f:case value="elevated">Elevated</f:case>
     <f:case value="critical">Critical</f:case>
-    <f:defaultCase>{data.tx_themeupsidedown_location_threat}</f:defaultCase>
+    <f:defaultCase>{record.tx_themeupsidedown_location_threat}</f:defaultCase>
   </f:switch>
 </f:variable>
 
-<article class="ud-location-card{f:if(condition: data.tx_themeupsidedown_location_featured, then: ' ud-location-card--featured')}" style="max-width: 320px;">
+<article class="ud-location-card{f:if(condition: record.tx_themeupsidedown_location_featured, then: ' ud-location-card--featured')}" style="max-width: 320px;">
   <div class="ud-location-card__body" style="padding: 1.1rem;">
-    <h3 class="ud-location-card__name">{data.header}</h3>
-    <f:if condition="{data.tx_themeupsidedown_location_coords}">
-      <code class="ud-location-card__coords">{data.tx_themeupsidedown_location_coords}</code>
+    <h3 class="ud-location-card__name">{record.header}</h3>
+    <f:if condition="{record.tx_themeupsidedown_location_coords}">
+      <code class="ud-location-card__coords">{record.tx_themeupsidedown_location_coords}</code>
     </f:if>
-    <f:if condition="{data.bodytext}">
-      <p class="ud-location-card__desc" style="margin-top: 0.5rem;">{data.bodytext -> f:format.stripTags() -> f:format.crop(maxCharacters: 100)}</p>
+    <f:if condition="{record.bodytext}">
+      <p class="ud-location-card__desc" style="margin-top: 0.5rem;">{record.bodytext -> f:format.stripTags() -> f:format.crop(maxCharacters: 100)}</p>
     </f:if>
-    <span class="ud-location-card__threat ud-threat--{data.tx_themeupsidedown_location_threat}">{threatLabel}</span>
+    <span class="ud-location-card__threat ud-threat--{record.tx_themeupsidedown_location_threat}">{threatLabel}</span>
   </div>
 </article>
 </html>

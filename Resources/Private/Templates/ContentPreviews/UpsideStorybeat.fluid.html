@@ -4,12 +4,12 @@
 >
 
 <div style="padding: 12px; border: 1px solid #5c2c8a; border-radius: 8px; background: #180d28; color: #f6ecff;">
-  <strong>{data.header}</strong>
-  <f:if condition="{data.subheader}">
-    <div style="opacity: 0.8; margin-top: 4px;">{data.subheader}</div>
+  <strong>{record.header}</strong>
+  <f:if condition="{record.subheader}">
+    <div style="opacity: 0.8; margin-top: 4px;">{record.subheader}</div>
   </f:if>
-  <f:if condition="{data.bodytext}">
-    <div style="margin-top: 8px; opacity: 0.9;">{data.bodytext -> f:format.stripTags() -> f:format.crop(maxCharacters: 160)}</div>
+  <f:if condition="{record.bodytext}">
+    <div style="margin-top: 8px; opacity: 0.9;">{record.bodytext -> f:format.stripTags() -> f:format.crop(maxCharacters: 160)}</div>
   </f:if>
 </div>
 
