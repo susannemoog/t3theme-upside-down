@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 160" fill="none">
+  <!-- Demogorgon abstract flower-head silhouette -->
+
+  <!-- Petal segments of the "flower" head (6 petals) -->
+  <path d="M60,40 C60,40 48,18 44,8 C40,-2 52,2 60,22 C68,2 80,-2 76,8 C72,18 60,40 60,40Z"
+        fill="#0b1116" fill-opacity="0.85"/>
+  <path d="M60,40 C60,40 40,28 28,22 C16,16 18,28 30,32 C22,42 18,54 26,54 C34,54 44,42 60,40Z"
+        fill="#0b1116" fill-opacity="0.85"/>
+  <path d="M60,40 C60,40 38,48 28,58 C18,68 28,76 36,66 C34,80 38,92 46,88 C54,84 54,68 60,60 C60,60 60,40 60,40Z"
+        fill="#0b1116" fill-opacity="0.8"/>
+  <path d="M60,40 C60,40 62,60 60,60 C66,68 66,84 74,88 C82,92 86,80 84,66 C92,76 102,68 92,58 C82,48 60,40 60,40Z"
+        fill="#0b1116" fill-opacity="0.8"/>
+  <path d="M60,40 C60,40 76,42 90,54 C102,64 94,76 90,54 C96,54 102,42 90,32 C102,28 104,16 92,22 C80,28 60,40 60,40Z"
+        fill="#0b1116" fill-opacity="0.85"/>
+  <path d="M60,40 C60,40 60,22 60,22 C68,2 80,-2 76,8 C72,18 60,40 60,40Z"
+        fill="#0b1116" fill-opacity="0.7"/>
+
+  <!-- Inner maw -->
+  <circle cx="60" cy="44" r="14" fill="#0b1116" fill-opacity="0.9"/>
+
+  <!-- Faint inner ring detail -->
+  <circle cx="60" cy="44" r="9" stroke="#16222d" stroke-width="2" fill="none" stroke-opacity="0.6"/>
+
+  <!-- Body / torso -->
+  <path d="M46,56 C42,70 40,90 38,110 C36,130 42,145 52,148 C56,152 64,152 68,148 C78,145 84,130 82,110 C80,90 78,70 74,56 C70,54 50,54 46,56Z"
+        fill="#0b1116" fill-opacity="0.82"/>
+
+  <!-- Limbs / tendrils -->
+  <!-- Left arm -->
+  <path d="M44,72 C32,78 20,90 14,105 C10,116 16,120 22,112 C18,122 22,130 28,124 C24,132 30,138 36,130"
+        stroke="#0b1116" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.78"/>
+  <!-- Right arm -->
+  <path d="M76,72 C88,78 100,90 106,105 C110,116 104,120 98,112 C102,122 98,130 92,124 C96,132 90,138 84,130"
+        stroke="#0b1116" stroke-width="5" stroke-linecap="round" fill="none" stroke-opacity="0.78"/>
+  <!-- Left leg -->
+  <path d="M48,148 C44,155 40,158 36,158" stroke="#0b1116" stroke-width="4" stroke-linecap="round" fill="none" stroke-opacity="0.75"/>
+  <!-- Right leg -->
+  <path d="M72,148 C76,155 80,158 84,158" stroke="#0b1116" stroke-width="4" stroke-linecap="round" fill="none" stroke-opacity="0.75"/>
+
+  <!-- Subtle glow accent on head -->
+  <circle cx="60" cy="44" r="18" fill="none" stroke="#ff5a3d" stroke-width="0.5" stroke-opacity="0.18"/>
+</svg>

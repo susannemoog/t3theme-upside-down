@@ -1,0 +1,29 @@
+@import './TypoScript/*.typoscript'
+
+page = PAGE
+page {
+  bodyTagCObject = TEXT
+  bodyTagCObject {
+    data = sitesettings:upsideDown.colorScheme
+    noTrimWrap = |<body class="theme-upside-down |">|
+  }
+
+  headerData {
+    99 = TEXT
+    99.value (
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Space+Grotesk:wght@300..700&display=swap">
+    )
+  }
+
+  includeCSS {
+    theme_upside_down = EXT:theme_upside_down/Resources/Public/Css/main.css
+  }
+
+  includeJSFooter {
+    theme_upside_down = EXT:theme_upside_down/Resources/Public/JavaScript/main.js
+  }
+
+  10 =< lib.fluidPage
+}

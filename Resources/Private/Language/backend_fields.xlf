@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="EXT:theme_upside_down/Resources/Private/Language/backend_fields.xlf" date="2026-04-13T00:00:00Z" product-name="theme_upside_down">
+    <header/>
+    <body>
+      <trans-unit id="tt_content.group.upside_narrative">
+        <source>Upside Down Narrative</source>
+      </trans-unit>
+
+      <!-- upside_storybeat -->
+      <trans-unit id="tt_content.CType.upside_storybeat.label">
+        <source>Story Beat</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.upside_storybeat.description">
+        <source>Narrative block with optional call-to-action.</source>
+      </trans-unit>
+
+      <!-- upside_hero -->
+      <trans-unit id="tt_content.CType.upside_hero.label">
+        <source>Landing Hero</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.upside_hero.description">
+        <source>Full-viewport hero section for the landing page.</source>
+      </trans-unit>
+
+      <!-- upside_featured -->
+      <trans-unit id="tt_content.CType.upside_featured.label">
+        <source>Featured Dispatch</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.upside_featured.description">
+        <source>Two-column featured card with image, body text and call-to-action.</source>
+      </trans-unit>
+
+      <!-- upside_character -->
+      <trans-unit id="tt_content.CType.upside_character.label">
+        <source>Character Profile</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.upside_character.description">
+        <source>A single character profile card for the residents grid.</source>
+      </trans-unit>
+
+      <!-- upside_location -->
+      <trans-unit id="tt_content.CType.upside_location.label">
+        <source>Breach Point</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.upside_location.description">
+        <source>A single location/breach point card for the investigation sites grid.</source>
+      </trans-unit>
+
+      <!-- upside_incident -->
+      <trans-unit id="tt_content.CType.upside_incident.label">
+        <source>Incident Report</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.upside_incident.description">
+        <source>A single accordion item for the incident archive.</source>
+      </trans-unit>
+
+      <!-- upside_testimonial -->
+      <trans-unit id="tt_content.CType.upside_testimonial.label">
+        <source>Witness Testimonial</source>
+      </trans-unit>
+      <trans-unit id="tt_content.CType.upside_testimonial.description">
+        <source>A single testimonial slide for the witness slider.</source>
+      </trans-unit>
+
+      <!-- Shared CTA fields -->
+      <trans-unit id="tt_content.tx_themeupsidedown_cta_link">
+        <source>Call-to-action link</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_themeupsidedown_cta_label">
+        <source>Call-to-action label</source>
+      </trans-unit>
+
+      <!-- Character fields -->
+      <trans-unit id="tt_content.tx_themeupsidedown_character_faction">
+        <source>Faction / affiliation</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_themeupsidedown_character_status">
+        <source>Field status</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_themeupsidedown_character_status.unknown">
+        <source>Unknown</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_themeupsidedown_character_status.alive">
+        <source>Alive</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_themeupsidedown_character_status.missing">
+        <source>Missing</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_themeupsidedown_character_status.compromised">
+        <source>Compromised</source>
+      </trans-unit>
+
+      <!-- Location fields -->
+      <trans-unit id="tt_content.tx_themeupsidedown_location_coords">
+        <source>Coordinates</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_themeupsidedown_location_threat">
+        <source>Threat level</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_themeupsidedown_location_threat.nominal">
+        <source>Nominal</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_themeupsidedown_location_threat.elevated">
+        <source>Elevated</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_themeupsidedown_location_threat.critical">
+        <source>Critical</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_themeupsidedown_location_featured">
+        <source>Featured (spans two grid columns)</source>
+      </trans-unit>
+
+      <!-- Incident fields -->
+      <trans-unit id="tt_content.tx_themeupsidedown_incident_id">
+        <source>Report ID</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_themeupsidedown_incident_date">
+        <source>Date</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_themeupsidedown_incident_classification">
+        <source>Classification</source>
+      </trans-unit>
+
+      <!-- Testimonial fields -->
+      <trans-unit id="tt_content.tx_themeupsidedown_testimonial_citation">
+        <source>Citation</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_themeupsidedown_testimonial_location">
+        <source>Location</source>
+      </trans-unit>
+      <trans-unit id="tt_content.tx_themeupsidedown_testimonial_clearance">
+        <source>Clearance level</source>
+      </trans-unit>
+
+      <!-- frame_class -->
+      <trans-unit id="tt_content.frame_class.label">
+        <source>Surface style</source>
+      </trans-unit>
+      <trans-unit id="tt_content.frame_class.default">
+        <source>Default surface</source>
+      </trans-unit>
+      <trans-unit id="tt_content.frame_class.bg_dark">
+        <source>Dark surface</source>
+      </trans-unit>
+      <trans-unit id="tt_content.frame_class.bg_crimson">
+        <source>Crimson surface</source>
+      </trans-unit>
+      <trans-unit id="tt_content.frame_class.bg_void">
+        <source>Void surface</source>
+      </trans-unit>
+      <trans-unit id="tt_content.frame_class.classified">
+        <source>Classified Document</source>
+      </trans-unit>
+      <trans-unit id="tt_content.frame_class.transmission">
+        <source>Incoming Transmission</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,23 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+<f:asset.css identifier="ud-backend-preview" href="EXT:theme_upside_down/Resources/Public/Css/backend-preview.css" />
+
+<div class="ud-featured__card" style="max-width: 480px;">
+  <div class="ud-featured__body" style="padding: 1.2rem;">
+    <f:if condition="{data.header}">
+      <span class="ud-featured__dispatch">{data.header}</span>
+    </f:if>
+    <f:if condition="{data.subheader}">
+      <h2 class="ud-featured__title" style="font-size: 1.1rem; margin: 0.4rem 0;">{data.subheader}</h2>
+    </f:if>
+    <f:if condition="{data.bodytext}">
+      <p style="font-size: 0.82rem; color: var(--ud-text-muted, #d3dbff); margin: 0.4rem 0; line-height: 1.5;">{data.bodytext -> f:format.stripTags() -> f:format.crop(maxCharacters: 100)}</p>
+    </f:if>
+    <f:if condition="{data.tx_themeupsidedown_cta_label}">
+      <span class="ud-featured__cta" style="font-size: 0.82rem;">{data.tx_themeupsidedown_cta_label} →</span>
+    </f:if>
+  </div>
+</div>
+</html>

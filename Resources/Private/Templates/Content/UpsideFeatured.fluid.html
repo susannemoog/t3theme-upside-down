@@ -1,0 +1,37 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+
+<section class="ud-featured" id="ud-dispatch" aria-label="Featured dispatch">
+  <div class="ud-featured__card">
+
+    <f:if condition="{files}">
+      <div class="ud-featured__visual" aria-hidden="true">
+        <f:image image="{files.0}" alt="{files.0.alternative}" />
+      </div>
+    </f:if>
+
+    <div class="ud-featured__body">
+      <f:if condition="{data.header}">
+        <span class="ud-featured__dispatch">{data.header}</span>
+      </f:if>
+      <f:if condition="{data.subheader}">
+        <h2 class="ud-featured__title">{data.subheader}</h2>
+      </f:if>
+      <f:if condition="{data.bodytext}">
+        <div class="ud-prose">
+          <f:format.html>{data.bodytext}</f:format.html>
+        </div>
+      </f:if>
+      <f:if condition="{data.tx_themeupsidedown_cta_link}">
+        <f:link.typolink parameter="{data.tx_themeupsidedown_cta_link}" class="ud-featured__cta">
+          {f:if(condition: data.tx_themeupsidedown_cta_label, then: data.tx_themeupsidedown_cta_label, else: 'Read Mission Report →')}
+        </f:link.typolink>
+      </f:if>
+    </div>
+
+  </div>
+</section>
+
+</html>

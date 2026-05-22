@@ -1,0 +1,158 @@
+/* ─── Accordion: Hawkins Incident Reports ─── */
+
+.ud-accordion-section {
+  width: min(100% - 3rem, var(--ud-shell));
+  margin-inline: auto;
+  margin-bottom: 0;
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+
+.ud-accordion-section__header {
+  margin-bottom: 1.25rem;
+}
+
+.ud-accordion-section__kicker {
+  color: var(--ud-signal);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.ud-accordion-section__title {
+  margin: 0.3rem 0 0.6rem;
+  font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+  font-size: clamp(1.55rem, 3.2vw, 2.4rem);
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.ud-accordion-section__desc {
+  color: var(--ud-text);
+  max-width: 65ch;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.ud-accordion {
+  background: var(--ud-surface);
+  border: 1px solid var(--ud-border);
+  border-radius: var(--ud-radius);
+  overflow: hidden;
+  box-shadow: var(--ud-shadow);
+}
+
+.ud-accordion__item {
+  border-bottom: 1px solid var(--ud-border);
+}
+
+.ud-accordion__item:last-child {
+  border-bottom: none;
+}
+
+.ud-accordion__trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  width: 100%;
+  padding: 1.1rem 1.3rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ud-text);
+  text-align: left;
+  transition: background-color 0.2s ease;
+  list-style: none;
+  font-family: inherit;
+}
+
+.ud-accordion__trigger::-webkit-details-marker {
+  display: none;
+}
+
+.ud-accordion__item[open] .ud-accordion__trigger {
+  background: color-mix(in srgb, var(--ud-surface) 60%, transparent);
+}
+
+.ud-accordion__trigger::before {
+  content: "▶";
+  display: inline-block;
+  color: var(--ud-signal);
+  font-size: 0.65rem;
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.ud-accordion__item[open] .ud-accordion__trigger::before {
+  transform: rotate(90deg);
+}
+
+.ud-accordion__trigger:hover {
+  background: color-mix(in srgb, var(--ud-surface) 50%, transparent);
+}
+
+.ud-accordion__id {
+  font-family: "Courier New", "Courier", monospace;
+  font-size: 0.72rem;
+  color: var(--ud-signal);
+  letter-spacing: 0.08em;
+  flex-shrink: 0;
+}
+
+.ud-accordion__label {
+  flex: 1;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+
+.ud-accordion__date {
+  font-size: 0.72rem;
+  color: var(--ud-text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.ud-accordion__panel {
+  padding: 0 1.3rem 1.3rem 3.6rem;
+  border-left: 3px solid transparent;
+  border-image: linear-gradient(180deg, var(--ud-signal), var(--ud-accent)) 1;
+  animation: ud-accordion-open 0.22s ease forwards;
+}
+
+.ud-accordion__panel-inner {
+  font-family: "Courier New", "Courier", monospace;
+  font-size: 0.84rem;
+  line-height: 1.72;
+  color: var(--ud-text-muted);
+}
+
+.ud-accordion__panel-inner p {
+  margin-block: 0 0.65rem;
+}
+
+.ud-accordion__classification {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.22rem 0.55rem;
+  border-radius: 3px;
+  background: rgb(196 28 53 / 12%);
+  border: 1px solid rgb(196 28 53 / 30%);
+  color: var(--ud-accent-soft);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ud-accordion__panel {
+    animation: none;
+  }
+
+  .ud-accordion__trigger::before {
+    transition: none;
+  }
+}

@@ -1,0 +1,37 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+
+<f:variable name="variantClass">
+  <f:switch expression="{data.frame_class}">
+    <f:case value="classified">ud-storybeat--classified</f:case>
+    <f:case value="transmission">ud-storybeat--transmission</f:case>
+    <f:case value="default">ud-storybeat--hero</f:case>
+    <f:case value="bg-dark">ud-storybeat--bg-dark</f:case>
+    <f:case value="bg-crimson">ud-storybeat--bg-crimson</f:case>
+    <f:case value="bg-void">ud-storybeat--bg-void</f:case>
+    <f:defaultCase></f:defaultCase>
+  </f:switch>
+</f:variable>
+
+<article class="ud-storybeat {variantClass}" id="c{data.uid}">
+  <f:if condition="{data.subheader}">
+    <p class="ud-storybeat__meta">{data.subheader}</p>
+  </f:if>
+  <f:if condition="{data.header}">
+    <h2>{data.header}</h2>
+  </f:if>
+  <div class="ud-prose">
+    <f:format.html>{data.bodytext}</f:format.html>
+  </div>
+  <f:if condition="{data.tx_themeupsidedown_cta_link}">
+    <p>
+      <f:link.typolink parameter="{data.tx_themeupsidedown_cta_link}" class="ud-button">
+        {f:if(condition: data.tx_themeupsidedown_cta_label, then: data.tx_themeupsidedown_cta_label, else: 'Learn more')}
+      </f:link.typolink>
+    </p>
+  </f:if>
+</article>
+
+</html>

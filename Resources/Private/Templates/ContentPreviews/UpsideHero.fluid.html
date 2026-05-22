@@ -1,0 +1,21 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+<f:asset.css identifier="ud-backend-preview" href="EXT:theme_upside_down/Resources/Public/Css/backend-preview.css" />
+
+<div style="background: #06090d; border: 1px solid #1a2d3e; border-radius: 0.75rem; overflow: hidden; max-height: 160px; position: relative;">
+  <div style="background: linear-gradient(135deg, #060a0e 60%, #0f1c27); padding: 1.5rem 2rem; color: #e8eff6;">
+    <f:if condition="{data.header}">
+      <p style="font-size: 0.68rem; color: #2dbfb0; text-transform: uppercase; letter-spacing: 0.15em; margin: 0 0 0.4rem; font-family: monospace;">{data.header}</p>
+    </f:if>
+    <f:if condition="{data.subheader}">
+      <h1 style="font-size: clamp(1.4rem, 4vw, 2.2rem); color: #fff; margin: 0 0 0.5rem; line-height: 1.1; font-family: Georgia, serif; font-weight: 400;">{data.subheader}</h1>
+    </f:if>
+    <f:if condition="{data.bodytext}">
+      <p style="font-size: 0.82rem; color: #d3dbff; margin: 0; line-height: 1.5; max-width: 50ch;">{data.bodytext -> f:format.stripTags() -> f:format.crop(maxCharacters: 100)}</p>
+    </f:if>
+  </div>
+  <div style="position: absolute; top: 0; right: 2rem; width: 80px; height: 100%; opacity: 0.18; background: radial-gradient(ellipse, #2dbfb0 0%, transparent 70%); pointer-events: none;"></div>
+</div>
+</html>

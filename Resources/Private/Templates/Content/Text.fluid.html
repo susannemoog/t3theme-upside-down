@@ -1,0 +1,15 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+
+<article class="ud-content ud-content--text" id="c{data.uid}">
+  <f:if condition="{data.header}">
+    <h2>{data.header}</h2>
+  </f:if>
+  <div class="ud-prose">
+    <f:format.html>{data.bodytext}</f:format.html>
+  </div>
+</article>
+
+</html>

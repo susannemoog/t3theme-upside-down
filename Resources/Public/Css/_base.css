@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body.theme-upside-down {
+  background: var(--ud-bg);
+  color: var(--ud-text);
+  font-family: "Space Grotesk", "Avenir Next", "Segoe UI", sans-serif;
+  line-height: 1.7;
+  font-size: 1rem;
+  letter-spacing: 0.005em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+p,
+ul,
+ol,
+blockquote {
+  margin-block: 0 1.05rem;
+}
+
+a {
+  color: var(--ud-link);
+  text-decoration-thickness: 0.12em;
+  text-underline-offset: 0.14em;
+}
+
+a:hover {
+  color: var(--ud-link-hover);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--ud-focus);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgb(11 17 22 / 95%);
+}
+
+.ud-shell {
+  width: min(100% - 2.2rem, var(--ud-shell));
+  margin-inline: auto;
+}
+
+.ud-skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+}
+
+.ud-skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 1000;
+  background: var(--ud-surface-strong);
+  color: var(--ud-text);
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--ud-radius-sm);
+  border: 1px solid var(--ud-border);
+}
+
+::selection {
+  background: rgb(255 224 138 / 35%);
+  color: var(--ud-text);
+}
+
+@media (prefers-contrast: more) {
+  a {
+    text-decoration-thickness: 0.14em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

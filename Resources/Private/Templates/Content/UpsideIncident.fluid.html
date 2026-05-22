@@ -1,0 +1,30 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+
+<details class="ud-accordion__item" role="listitem" id="c{data.uid}">
+  <summary class="ud-accordion__trigger">
+    <f:if condition="{data.tx_themeupsidedown_incident_id}">
+      <span class="ud-accordion__id">{data.tx_themeupsidedown_incident_id}</span>
+    </f:if>
+    <span class="ud-accordion__label">{data.header}</span>
+    <f:if condition="{data.tx_themeupsidedown_incident_date}">
+      <span class="ud-accordion__date">{data.tx_themeupsidedown_incident_date}</span>
+    </f:if>
+  </summary>
+  <div class="ud-accordion__panel">
+    <div class="ud-accordion__panel-inner">
+      <f:if condition="{data.tx_themeupsidedown_incident_classification}">
+        <span class="ud-accordion__classification">{data.tx_themeupsidedown_incident_classification}</span>
+      </f:if>
+      <f:if condition="{data.bodytext}">
+        <div class="ud-prose">
+          <f:format.html>{data.bodytext}</f:format.html>
+        </div>
+      </f:if>
+    </div>
+  </div>
+</details>
+
+</html>

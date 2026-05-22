@@ -1,0 +1,282 @@
+/* ─── Base content card ─── */
+
+.ud-content,
+.ud-storybeat {
+  position: relative;
+  width: min(100% - 3rem, var(--ud-shell));
+  margin-inline: auto;
+  background: var(--ud-surface-strong);
+  border: 1px solid var(--ud-border-strong);
+  border-top: none;
+  border-radius: var(--ud-radius);
+  padding: clamp(2.2rem, 5vw, 3.5rem);
+  margin-bottom: 2rem;
+  box-shadow: var(--ud-shadow), 0 0 0 1px var(--ud-border);
+  overflow: hidden;
+}
+
+/* Gradient top accent bar — 4px for visual weight */
+.ud-content::before,
+.ud-storybeat::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--ud-signal), var(--ud-accent));
+  border-radius: var(--ud-radius) var(--ud-radius) 0 0;
+}
+
+/* ─── Headings inside cards ─── */
+
+.ud-content h2,
+.ud-storybeat h2 {
+  margin: 0 0 1.2rem;
+  color: var(--ud-text);
+  font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+  font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--ud-border);
+}
+
+/* ─── Storybeat hero variant ─── */
+
+.ud-storybeat--hero {
+  background:
+    linear-gradient(155deg, rgb(18 30 42 / 100%), rgb(12 18 26 / 100%)),
+    radial-gradient(ellipse at top right, rgb(45 191 176 / 6%), transparent 50%);
+  border-color: var(--ud-border-strong);
+  box-shadow: var(--ud-shadow), 0 0 80px rgb(196 28 53 / 8%);
+}
+
+.ud-storybeat--hero::before {
+  background: linear-gradient(90deg, var(--ud-accent), var(--ud-signal), var(--ud-accent));
+}
+
+.ud-storybeat--hero h2 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+}
+
+/* ─── Textteaser accent bar ─── */
+
+.ud-storybeat--textteaser {
+  padding-left: clamp(2rem, 3.5vw, 3rem);
+}
+
+.ud-storybeat--textteaser::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--ud-signal), var(--ud-accent));
+  border-radius: 999px;
+}
+
+/* ─── Prose ─── */
+
+.ud-prose {
+  color: var(--ud-text-muted);
+  max-width: 72ch;
+  line-height: 1.88;
+  font-size: 1rem;
+}
+
+.ud-prose p:first-child { margin-top: 0; }
+.ud-prose p:last-child { margin-bottom: 0; }
+
+.ud-prose p,
+.ud-prose li { color: var(--ud-text-muted); }
+
+.ud-prose ul li::marker,
+.ud-prose ol li::marker { color: var(--ud-signal); }
+
+.ud-prose strong { color: var(--ud-text); }
+
+.ud-prose ul,
+.ud-prose ol { padding-left: 1.5rem; }
+
+.ud-prose h3 {
+  color: var(--ud-text);
+  font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+  font-size: 1.35rem;
+  margin: 1.8rem 0 0.55rem;
+  letter-spacing: -0.01em;
+}
+
+.ud-prose a {
+  color: var(--ud-link);
+}
+
+/* ─── Textmedia: real uploaded images ─── */
+
+.ud-textmedia-grid {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: start;
+}
+
+.ud-textmedia-grid__media {
+  display: grid;
+  gap: 1rem;
+}
+
+.ud-media {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--ud-border);
+  border-radius: var(--ud-radius-sm);
+  object-fit: cover;
+  display: block;
+}
+
+/* ─── Column wrappers ─── */
+
+.ud-col {
+  display: grid;
+  gap: 2rem;
+}
+
+.ud-col-20 .ud-content,
+.ud-col-20 .ud-storybeat,
+.ud-col-10 .ud-content,
+.ud-col-10 .ud-storybeat,
+.ud-main-grid > aside .ud-content,
+.ud-main-grid > aside .ud-storybeat {
+  width: 100%;
+}
+
+/* ─── Featured dispatch card ─── */
+
+.ud-featured {
+  position: relative;
+  width: min(100% - 3rem, var(--ud-shell));
+  margin-inline: auto;
+  margin-bottom: 0;
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+
+.ud-featured__card {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  min-height: 28rem;
+  background: var(--ud-surface);
+  border: 1px solid var(--ud-border);
+  border-radius: var(--ud-radius);
+  overflow: hidden;
+  box-shadow: var(--ud-shadow), var(--ud-glow-red);
+}
+
+.ud-featured__visual {
+  position: relative;
+  background: linear-gradient(135deg, rgb(11 18 26 / 98%), rgb(20 8 12 / 95%));
+  overflow: hidden;
+}
+
+.ud-featured__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.38;
+  filter: sepia(30%) hue-rotate(320deg);
+}
+
+.ud-featured__visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent 50%, var(--ud-surface));
+  pointer-events: none;
+}
+
+.ud-featured__body {
+  padding: clamp(2rem, 4vw, 3.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ud-featured__dispatch {
+  font-family: "Courier New", "Courier", monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ud-accent-soft);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.ud-featured__title {
+  margin: 0 0 1.4rem;
+  font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ud-text);
+}
+
+.ud-featured__body > p {
+  color: var(--ud-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.82;
+  margin: 0 0 2rem;
+  max-width: 44ch;
+}
+
+.ud-featured__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ud-signal);
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  border-bottom: 1px solid color-mix(in srgb, var(--ud-signal) 30%, transparent);
+  padding-bottom: 0.2rem;
+  transition: color 0.2s, border-color 0.2s;
+  align-self: flex-start;
+}
+
+.ud-featured__cta:hover {
+  color: var(--ud-link-hover);
+  border-color: var(--ud-link-hover);
+}
+
+/* ─── Responsive ─── */
+
+@media (max-width: 52rem) {
+  .ud-content,
+  .ud-storybeat {
+    width: min(100% - 2rem, var(--ud-shell));
+    padding: clamp(1.5rem, 4vw, 2.2rem);
+    margin-bottom: 1.25rem;
+  }
+
+  .ud-col {
+    gap: 1.25rem;
+  }
+
+  .ud-textmedia-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .ud-featured__card {
+    grid-template-columns: 1fr;
+  }
+
+  .ud-featured__visual {
+    min-height: 14rem;
+  }
+
+  .ud-featured__visual::after {
+    background: linear-gradient(to bottom, transparent 50%, var(--ud-surface));
+  }
+}

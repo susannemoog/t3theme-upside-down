@@ -1,0 +1,31 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+
+<div class="ud-slider__item" role="listitem" id="c{data.uid}">
+  <div>
+    <f:if condition="{data.subheader}">
+      <p class="ud-slider__kicker">{data.subheader}</p>
+    </f:if>
+    <h3 class="ud-slider__name">{data.header}</h3>
+  </div>
+  <blockquote class="ud-slider__quote">
+    <f:if condition="{data.bodytext}">
+      <p>{data.bodytext}</p>
+    </f:if>
+    <f:if condition="{data.tx_themeupsidedown_testimonial_citation}">
+      <cite>{data.tx_themeupsidedown_testimonial_citation}</cite>
+    </f:if>
+  </blockquote>
+  <div class="ud-slider__meta">
+    <f:if condition="{data.tx_themeupsidedown_testimonial_location}">
+      <span>{data.tx_themeupsidedown_testimonial_location}</span>
+    </f:if>
+    <f:if condition="{data.tx_themeupsidedown_testimonial_clearance}">
+      <span>{data.tx_themeupsidedown_testimonial_clearance}</span>
+    </f:if>
+  </div>
+</div>
+
+</html>

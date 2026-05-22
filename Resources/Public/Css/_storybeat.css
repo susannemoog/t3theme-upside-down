@@ -1,0 +1,211 @@
+/* ─── Base story beat: left border + report counter ─── */
+
+/* Left accent stripe for visual anchoring */
+.ud-storybeat:not([class*="ud-storybeat--"]) {
+  border-left: 3px solid color-mix(in srgb, var(--ud-signal) 40%, var(--ud-border));
+}
+
+/* Alternating top bar direction for visual variety */
+.ud-col .ud-storybeat:nth-child(even)::before,
+.ud-main-grid > div .ud-storybeat:nth-child(even)::before {
+  background: linear-gradient(90deg, var(--ud-accent), var(--ud-signal));
+}
+
+/* Monospace report counter in top-right corner */
+.ud-col,
+.ud-main-grid > div {
+  counter-reset: ud-card-counter;
+}
+
+.ud-col .ud-storybeat,
+.ud-main-grid > div .ud-storybeat {
+  counter-increment: ud-card-counter;
+}
+
+.ud-col .ud-storybeat:not([class*="ud-storybeat--"])::after,
+.ud-main-grid > div .ud-storybeat:not([class*="ud-storybeat--"])::after {
+  content: "NR·" counter(ud-card-counter, decimal-leading-zero);
+  position: absolute;
+  top: 1rem;
+  right: 1.3rem;
+  font-family: "Courier New", "Courier", monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  color: var(--ud-signal);
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+/* ─── Storybeat subheader / meta line ─── */
+
+.ud-storybeat__meta {
+  margin: 0 0 0.7rem;
+  color: var(--ud-signal);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+/* ─── CTA Button ─── */
+
+.ud-button {
+  display: inline-block;
+  padding: 0.78rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--ud-accent) 55%, var(--ud-border));
+  color: var(--ud-text);
+  text-decoration: none;
+  background: linear-gradient(120deg, var(--ud-accent), var(--ud-accent-soft));
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.ud-button:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  color: var(--ud-text);
+}
+
+.ud-button:focus-visible {
+  outline: 3px solid var(--ud-focus);
+  outline-offset: 3px;
+}
+
+/* ─── Classified Document variant ─── */
+
+.ud-storybeat--classified {
+  position: relative;
+  background:
+    linear-gradient(145deg, rgb(42 26 16 / 98%), rgb(30 16 10 / 98%)),
+    radial-gradient(circle at top right, rgb(196 28 53 / 10%), transparent 45%);
+  border-color: color-mix(in srgb, var(--ud-accent) 50%, var(--ud-border));
+  box-shadow: var(--ud-shadow), var(--ud-glow-red);
+  font-family: "Courier New", "Courier", monospace;
+}
+
+.ud-storybeat--classified::before {
+  content: "CLASSIFIED";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-28deg);
+  font-family: "Courier New", "Courier", monospace;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 700;
+  color: rgb(196 28 53 / 8%);
+  letter-spacing: 0.2em;
+  pointer-events: none;
+  white-space: nowrap;
+  user-select: none;
+  z-index: 0;
+}
+
+.ud-storybeat--classified .ud-storybeat__meta {
+  color: var(--ud-accent-soft);
+  text-decoration: line-through;
+  text-decoration-color: rgb(196 28 53 / 45%);
+}
+
+.ud-storybeat--classified h2 {
+  color: var(--ud-accent-soft);
+}
+
+.ud-storybeat--classified .ud-prose p,
+.ud-storybeat--classified .ud-prose li {
+  font-family: "Courier New", "Courier", monospace;
+  font-size: 0.88rem;
+}
+
+/* ─── Incoming Transmission variant ─── */
+
+.ud-storybeat--transmission {
+  position: relative;
+  background:
+    linear-gradient(145deg, rgb(10 24 21 / 98%), rgb(9 19 17 / 98%)),
+    radial-gradient(circle at bottom left, rgb(45 191 176 / 8%), transparent 48%);
+  border-color: color-mix(in srgb, var(--ud-signal) 48%, var(--ud-border));
+  box-shadow: var(--ud-shadow), var(--ud-glow-strong);
+}
+
+.ud-storybeat--transmission::before {
+  content: "▶ INCOMING TRANSMISSION — CHANNEL 6";
+  display: block;
+  margin-bottom: 1rem;
+  font-family: "Courier New", "Courier", monospace;
+  font-size: 0.68rem;
+  color: var(--ud-signal);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.78;
+}
+
+.ud-storybeat--transmission h2 {
+  color: var(--ud-signal);
+}
+
+.ud-storybeat--transmission .ud-storybeat__meta {
+  color: color-mix(in srgb, var(--ud-signal) 65%, var(--ud-text-muted));
+}
+
+.ud-storybeat--transmission .ud-prose p,
+.ud-storybeat--transmission .ud-prose li {
+  font-family: "Courier New", "Courier", monospace;
+  font-size: 0.88rem;
+  color: color-mix(in srgb, var(--ud-signal) 16%, var(--ud-text-muted));
+}
+
+.ud-storybeat--transmission .ud-prose p:last-child::after {
+  content: "█";
+  display: inline-block;
+  animation: ud-blink-cursor 0.9s step-end infinite;
+  color: var(--ud-signal);
+  margin-left: 0.2em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ud-storybeat--transmission .ud-prose p:last-child::after {
+    animation: none;
+  }
+}
+
+/* ─── bg-dark: deep shadow variant ─── */
+
+.ud-storybeat--bg-dark {
+  background:
+    linear-gradient(145deg, rgb(6 10 14 / 97%), rgb(8 12 18 / 97%)),
+    radial-gradient(ellipse at top right, rgb(30 50 70 / 20%), transparent 55%);
+  border-color: color-mix(in srgb, var(--ud-border-strong) 80%, var(--ud-border));
+  box-shadow: var(--ud-shadow), 0 0 60px rgb(0 0 0 / 35%);
+}
+
+/* ─── bg-crimson: dimensional breach tint ─── */
+
+.ud-storybeat--bg-crimson {
+  background:
+    linear-gradient(145deg, rgb(28 6 10 / 97%), rgb(20 4 8 / 97%)),
+    radial-gradient(circle at top right, rgb(196 28 53 / 8%), transparent 50%);
+  border-color: color-mix(in srgb, var(--ud-accent) 35%, var(--ud-border));
+  box-shadow: var(--ud-shadow), var(--ud-glow-red);
+}
+
+.ud-storybeat--bg-crimson h2 {
+  color: var(--ud-accent-soft);
+}
+
+/* ─── bg-void: teal void dimension tint ─── */
+
+.ud-storybeat--bg-void {
+  background:
+    linear-gradient(145deg, rgb(6 18 16 / 97%), rgb(8 22 20 / 97%)),
+    radial-gradient(circle at bottom left, rgb(45 191 176 / 6%), transparent 50%);
+  border-color: color-mix(in srgb, var(--ud-signal) 28%, var(--ud-border));
+  box-shadow: var(--ud-shadow), var(--ud-glow);
+}
+
+.ud-storybeat--bg-void h2 {
+  color: color-mix(in srgb, var(--ud-signal) 70%, var(--ud-text));
+}

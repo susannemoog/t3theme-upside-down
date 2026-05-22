@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <path id="circlePath" d="M 100,100 m -72,0 a 72,72 0 1,1 144,0 a 72,72 0 1,1 -144,0"/>
+  </defs>
+
+  <!-- Outer ring -->
+  <circle cx="100" cy="100" r="90" stroke="#cc2200" stroke-width="3" stroke-opacity="0.85"/>
+  <!-- Inner ring -->
+  <circle cx="100" cy="100" r="82" stroke="#cc2200" stroke-width="1" stroke-opacity="0.55"/>
+  <!-- Thin middle ring -->
+  <circle cx="100" cy="100" r="60" stroke="#cc2200" stroke-width="1.5" stroke-opacity="0.45"/>
+
+  <!-- Circular text -->
+  <text font-family="'Courier New', Courier, monospace" font-size="10" font-weight="700"
+        fill="#cc2200" fill-opacity="0.9" letter-spacing="3.2">
+    <textPath href="#circlePath">HAWKINS NATIONAL LABORATORY · RESTRICTED ACCESS ·</textPath>
+  </text>
+
+  <!-- CLASSIFIED centre label -->
+  <text x="100" y="95" text-anchor="middle"
+        font-family="'Courier New', Courier, monospace"
+        font-size="22" font-weight="700"
+        fill="#cc2200" fill-opacity="0.92"
+        letter-spacing="3">CLASSIFIED</text>
+
+  <!-- Divider lines -->
+  <line x1="38" y1="107" x2="162" y2="107" stroke="#cc2200" stroke-width="1" stroke-opacity="0.55"/>
+  <line x1="48" y1="111" x2="152" y2="111" stroke="#cc2200" stroke-width="0.6" stroke-opacity="0.35"/>
+
+  <!-- Level text -->
+  <text x="100" y="126" text-anchor="middle"
+        font-family="'Courier New', Courier, monospace"
+        font-size="8" font-weight="700"
+        fill="#cc2200" fill-opacity="0.75"
+        letter-spacing="2">LEVEL 5 — DO NOT DUPLICATE</text>
+
+  <!-- Corner ticks (decorative) -->
+  <line x1="28" y1="28" x2="38" y2="28" stroke="#cc2200" stroke-width="1.5" stroke-opacity="0.5"/>
+  <line x1="28" y1="28" x2="28" y2="38" stroke="#cc2200" stroke-width="1.5" stroke-opacity="0.5"/>
+  <line x1="172" y1="28" x2="162" y2="28" stroke="#cc2200" stroke-width="1.5" stroke-opacity="0.5"/>
+  <line x1="172" y1="28" x2="172" y2="38" stroke="#cc2200" stroke-width="1.5" stroke-opacity="0.5"/>
+  <line x1="28" y1="172" x2="38" y2="172" stroke="#cc2200" stroke-width="1.5" stroke-opacity="0.5"/>
+  <line x1="28" y1="172" x2="28" y2="162" stroke="#cc2200" stroke-width="1.5" stroke-opacity="0.5"/>
+  <line x1="172" y1="172" x2="162" y2="172" stroke="#cc2200" stroke-width="1.5" stroke-opacity="0.5"/>
+  <line x1="172" y1="172" x2="172" y2="162" stroke="#cc2200" stroke-width="1.5" stroke-opacity="0.5"/>
+</svg>

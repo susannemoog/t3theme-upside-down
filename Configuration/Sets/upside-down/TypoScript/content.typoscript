@@ -1,0 +1,54 @@
+lib.contentElement = FLUIDTEMPLATE
+lib.contentElement {
+  layoutRootPaths.10 = EXT:theme_upside_down/Resources/Private/Templates/Layouts/
+  partialRootPaths.10 = EXT:theme_upside_down/Resources/Private/Templates/Partials/
+  templateRootPaths.10 = EXT:theme_upside_down/Resources/Private/Templates/Content/
+
+  templateName >
+  templateName.ifEmpty.cObject = TEXT
+  templateName.ifEmpty.cObject {
+    field = CType
+    required = 1
+    case = uppercamelcase
+  }
+
+  dataProcessing.1421884800 = record-transformation
+
+  dataProcessing.10 = files
+  dataProcessing.10 {
+    if.isTrue.field = assets
+    references.fieldName = assets
+    as = files
+  }
+}
+
+tt_content = CASE
+tt_content.default =< lib.contentElement
+
+lib.dynamicContent = CONTENT
+lib.dynamicContent {
+  table = tt_content
+  select {
+    pidInList.data = TSFE:id
+    where.dataWrap = {#colPos}={field:colPos}
+    orderBy = sorting
+    languageField = sys_language_uid
+  }
+  renderObj =< tt_content
+  stdWrap.dataWrap = <div class="ud-col ud-col-{field:colPos}">|</div>
+}
+
+lib.dynamicContentSlide =< lib.dynamicContent
+lib.dynamicContentSlide.slide = -1
+
+lib.dynamicContentRaw = CONTENT
+lib.dynamicContentRaw {
+  table = tt_content
+  select {
+    pidInList.data = TSFE:id
+    where.dataWrap = {#colPos}={field:colPos}
+    orderBy = sorting
+    languageField = sys_language_uid
+  }
+  renderObj =< tt_content
+}

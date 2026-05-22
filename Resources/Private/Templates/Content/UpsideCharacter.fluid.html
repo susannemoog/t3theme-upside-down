@@ -1,0 +1,29 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+
+<f:variable name="statusLabel">
+  <f:switch expression="{data.tx_themeupsidedown_character_status}">
+    <f:case value="alive">Alive</f:case>
+    <f:case value="missing">Missing</f:case>
+    <f:case value="compromised">Compromised</f:case>
+    <f:defaultCase>Unknown</f:defaultCase>
+  </f:switch>
+</f:variable>
+
+<article class="ud-character-card" data-status="{data.tx_themeupsidedown_character_status}" id="c{data.uid}">
+  <f:if condition="{data.subheader}">
+    <span class="ud-character-card__role">{data.subheader}</span>
+  </f:if>
+  <h3 class="ud-character-card__name">{data.header}</h3>
+  <f:if condition="{data.tx_themeupsidedown_character_faction}">
+    <p class="ud-character-card__faction">{data.tx_themeupsidedown_character_faction}</p>
+  </f:if>
+  <f:if condition="{data.bodytext}">
+    <p class="ud-character-card__bio">{data.bodytext}</p>
+  </f:if>
+  <span class="ud-character-card__status ud-status--{data.tx_themeupsidedown_character_status}">{statusLabel}</span>
+</article>
+
+</html>

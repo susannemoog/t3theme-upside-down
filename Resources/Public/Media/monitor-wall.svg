@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="t d">
+  <title id="t">Monitor Wall</title>
+  <desc id="d">Retro monitoring wall with multiple screens and status indicators.</desc>
+  <rect width="1200" height="700" fill="#0c131a"/>
+  <g fill="#1d2c3a" stroke="#2d4357" stroke-width="6">
+    <rect x="80" y="90" width="320" height="220" rx="14"/>
+    <rect x="440" y="90" width="320" height="220" rx="14"/>
+    <rect x="800" y="90" width="320" height="220" rx="14"/>
+    <rect x="80" y="350" width="320" height="220" rx="14"/>
+    <rect x="440" y="350" width="320" height="220" rx="14"/>
+    <rect x="800" y="350" width="320" height="220" rx="14"/>
+  </g>
+  <g stroke="#83f0e2" stroke-width="4" fill="none" opacity="0.9">
+    <path d="M110 220C170 160 250 260 320 200C350 174 380 175 390 185"/>
+    <path d="M470 220C530 160 610 260 680 200C710 174 740 175 750 185"/>
+    <path d="M830 220C890 160 970 260 1040 200C1070 174 1100 175 1110 185"/>
+    <path d="M110 480C170 420 250 520 320 460C350 434 380 435 390 445"/>
+    <path d="M470 480C530 420 610 520 680 460C710 434 740 435 750 445"/>
+    <path d="M830 480C890 420 970 520 1040 460C1070 434 1100 435 1110 445"/>
+  </g>
+  <g fill="#ff8e75">
+    <circle cx="112" cy="112" r="6"/><circle cx="472" cy="112" r="6"/><circle cx="832" cy="112" r="6"/>
+    <circle cx="112" cy="372" r="6"/><circle cx="472" cy="372" r="6"/><circle cx="832" cy="372" r="6"/>
+  </g>
+</svg>

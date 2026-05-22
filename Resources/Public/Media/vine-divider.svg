@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 60" preserveAspectRatio="xMidYMid meet" fill="none">
+  <defs>
+    <linearGradient id="vineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#48d6c3" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#48d6c3" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#ff5a3d" stop-opacity="0.7"/>
+      <stop offset="80%" stop-color="#48d6c3" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#48d6c3" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#48d6c3" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#2d4357" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Main vine spine -->
+  <path d="M0,30 C60,28 100,32 160,29 C220,26 260,34 320,30 C380,26 420,34 480,30 C540,26 580,34 640,31 C700,28 740,32 800,30"
+        stroke="url(#vineGrad)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Upper tendrils -->
+  <path d="M80,29 C85,22 90,16 98,12" stroke="#48d6c3" stroke-width="1" stroke-opacity="0.45" stroke-linecap="round"/>
+  <path d="M160,29 C168,20 178,14 188,10" stroke="#48d6c3" stroke-width="1" stroke-opacity="0.35" stroke-linecap="round"/>
+  <path d="M240,30 C248,22 255,17 261,13" stroke="#ff5a3d" stroke-width="0.8" stroke-opacity="0.4" stroke-linecap="round"/>
+  <path d="M360,30 C368,21 378,15 386,11" stroke="#48d6c3" stroke-width="1" stroke-opacity="0.45" stroke-linecap="round"/>
+  <path d="M440,30 C446,23 453,18 460,14" stroke="#48d6c3" stroke-width="0.8" stroke-opacity="0.35" stroke-linecap="round"/>
+  <path d="M560,30 C566,21 575,14 582,10" stroke="#ff5a3d" stroke-width="1" stroke-opacity="0.4" stroke-linecap="round"/>
+  <path d="M640,31 C647,23 655,17 663,13" stroke="#48d6c3" stroke-width="1" stroke-opacity="0.45" stroke-linecap="round"/>
+  <path d="M720,30 C726,22 733,16 740,12" stroke="#48d6c3" stroke-width="0.8" stroke-opacity="0.35" stroke-linecap="round"/>
+
+  <!-- Lower tendrils -->
+  <path d="M120,29 C126,36 130,42 128,48" stroke="#48d6c3" stroke-width="0.8" stroke-opacity="0.35" stroke-linecap="round"/>
+  <path d="M200,30 C205,37 208,44 206,50" stroke="#2d4357" stroke-width="1" stroke-opacity="0.5" stroke-linecap="round"/>
+  <path d="M300,30 C306,38 312,44 310,50" stroke="#48d6c3" stroke-width="0.8" stroke-opacity="0.3" stroke-linecap="round"/>
+  <path d="M400,30 C405,38 407,45 405,51" stroke="#ff5a3d" stroke-width="0.8" stroke-opacity="0.35" stroke-linecap="round"/>
+  <path d="M500,30 C506,38 510,45 508,51" stroke="#48d6c3" stroke-width="1" stroke-opacity="0.3" stroke-linecap="round"/>
+  <path d="M600,30 C604,38 607,44 605,50" stroke="#2d4357" stroke-width="0.8" stroke-opacity="0.45" stroke-linecap="round"/>
+  <path d="M680,31 C684,38 686,45 684,51" stroke="#48d6c3" stroke-width="0.8" stroke-opacity="0.35" stroke-linecap="round"/>
+
+  <!-- Small leaf nodes (ellipses at tendril tips) -->
+  <ellipse cx="98" cy="11" rx="4" ry="2.5" fill="url(#leafGrad)" transform="rotate(-20 98 11)"/>
+  <ellipse cx="188" cy="9" rx="3.5" ry="2" fill="url(#leafGrad)" transform="rotate(-30 188 9)"/>
+  <ellipse cx="261" cy="12" rx="3" ry="1.8" fill="#ff5a3d" fill-opacity="0.25" transform="rotate(-15 261 12)"/>
+  <ellipse cx="386" cy="10" rx="4" ry="2.5" fill="url(#leafGrad)" transform="rotate(-25 386 10)"/>
+  <ellipse cx="460" cy="13" rx="3" ry="1.8" fill="url(#leafGrad)" transform="rotate(-20 460 13)"/>
+  <ellipse cx="582" cy="9" rx="3.5" ry="2" fill="#ff5a3d" fill-opacity="0.25" transform="rotate(-30 582 9)"/>
+  <ellipse cx="663" cy="12" rx="4" ry="2.5" fill="url(#leafGrad)" transform="rotate(-22 663 12)"/>
+  <ellipse cx="740" cy="11" rx="3" ry="1.8" fill="url(#leafGrad)" transform="rotate(-18 740 11)"/>
+
+  <!-- Centre accent node -->
+  <circle cx="400" cy="30" r="3.5" fill="#ff5a3d" fill-opacity="0.4"/>
+  <circle cx="400" cy="30" r="5.5" fill="none" stroke="#ff5a3d" stroke-width="0.8" stroke-opacity="0.25"/>
+</svg>

@@ -1,0 +1,167 @@
+/* ─── Testimonial Slider ─── */
+
+.ud-slider-section {
+  width: min(100% - 3rem, var(--ud-shell));
+  margin-inline: auto;
+  margin-bottom: 0;
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+
+.ud-slider-section__header {
+  margin-bottom: 1.25rem;
+}
+
+.ud-slider-section__kicker {
+  color: var(--ud-signal);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.ud-slider-section__title {
+  margin: 0.3rem 0 0.6rem;
+  font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+  font-size: clamp(1.55rem, 3.2vw, 2.4rem);
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.ud-slider-section__desc {
+  color: var(--ud-text);
+  max-width: 65ch;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.ud-slider {
+  position: relative;
+}
+
+.ud-slider__track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 0.25rem;
+}
+
+.ud-slider__track::-webkit-scrollbar {
+  display: none;
+}
+
+.ud-slider__item {
+  scroll-snap-align: start;
+  flex: 0 0 min(85vw, 26rem);
+  background: var(--ud-surface);
+  border: 1px solid var(--ud-border);
+  border-top: 2px solid var(--ud-signal);
+  border-radius: var(--ud-radius);
+  padding: 1.8rem 2rem 1.6rem;
+  box-shadow: var(--ud-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+
+.ud-slider__kicker {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ud-signal);
+}
+
+.ud-slider__name {
+  margin: 0.4rem 0 0;
+  font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+  font-size: 1.22rem;
+  line-height: 1.15;
+  color: var(--ud-text);
+}
+
+.ud-slider__quote {
+  margin: 0;
+  border-left: 3px solid;
+  border-image: linear-gradient(180deg, var(--ud-signal), var(--ud-accent)) 1;
+  padding-left: 1rem;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--ud-text-muted);
+  line-height: 1.68;
+  flex: 1;
+}
+
+.ud-slider__quote cite {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.78rem;
+  font-style: normal;
+  font-family: "Courier New", "Courier", monospace;
+  color: var(--ud-signal);
+  letter-spacing: 0.04em;
+}
+
+.ud-slider__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  border-top: 1px solid var(--ud-border);
+  padding-top: 0.85rem;
+  font-size: 0.72rem;
+  color: var(--ud-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.ud-slider__controls {
+  display: flex;
+  gap: 0.65rem;
+  margin-top: 1rem;
+  justify-content: flex-end;
+}
+
+.ud-slider__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--ud-signal) 40%, var(--ud-border));
+  background: color-mix(in srgb, var(--ud-surface-strong) 80%, transparent);
+  color: var(--ud-signal);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  font-family: inherit;
+}
+
+.ud-slider__btn:hover {
+  background: color-mix(in srgb, var(--ud-surface-strong) 95%, transparent);
+  box-shadow: 0 0 16px rgb(45 191 176 / 20%);
+  transform: scale(1.05);
+}
+
+.ud-slider__btn:focus-visible {
+  outline: 3px solid var(--ud-focus);
+  outline-offset: 3px;
+}
+
+.ud-slider__btn:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 52rem) {
+  .ud-slider__item {
+    flex: 0 0 min(90vw, 22rem);
+  }
+}

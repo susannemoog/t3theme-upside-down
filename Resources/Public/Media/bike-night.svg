@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="t d">
+  <title id="t">Bike Night</title>
+  <desc id="d">Night ride silhouettes with headlights crossing a dark road.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#111a22"/>
+      <stop offset="100%" stop-color="#06090d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#sky)"/>
+  <path d="M0 540C160 500 310 520 470 545C650 575 860 575 1200 520V700H0Z" fill="#0d141a"/>
+  <g fill="#0a1116">
+    <circle cx="280" cy="520" r="86"/><circle cx="520" cy="510" r="92"/><circle cx="760" cy="525" r="88"/>
+  </g>
+  <g stroke="#83f0e2" stroke-width="6" stroke-linecap="round" opacity="0.92">
+    <path d="M250 520L310 450L385 450L435 520"/>
+    <path d="M490 510L545 435L620 435L670 510"/>
+    <path d="M730 525L790 455L865 455L915 525"/>
+  </g>
+  <g fill="#ffefb0" opacity="0.85">
+    <circle cx="390" cy="448" r="12"/><circle cx="625" cy="433" r="12"/><circle cx="870" cy="453" r="12"/>
+  </g>
+  <g fill="#ff8e75" opacity="0.22">
+    <ellipse cx="420" cy="460" rx="160" ry="60"/>
+    <ellipse cx="660" cy="445" rx="160" ry="60"/>
+    <ellipse cx="900" cy="465" rx="160" ry="60"/>
+  </g>
+</svg>

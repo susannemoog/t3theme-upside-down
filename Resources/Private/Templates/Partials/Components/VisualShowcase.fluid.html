@@ -1,0 +1,43 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+
+<section class="ud-visual-showcase ud-shell" aria-label="Visual highlights">
+  <div class="ud-visual-showcase__intro">
+    <p class="ud-section-header__kicker">Visual Transmission</p>
+    <h2>Signals, Portals, And Field Footage</h2>
+    <p>Surveillance footage captured across Hawkins and the alternate dimension. Handle with extreme caution. Some of these images were recovered from compromised field operatives.</p>
+  </div>
+
+  <div class="ud-visual-gallery" role="list">
+    <figure class="ud-visual-card ud-visual-card--wide" role="listitem">
+      <f:image src="EXT:theme_upside_down/Resources/Public/Media/signal-grid.svg" alt="Glowing signal grid with wave traces" class="ud-visual-card__image" />
+      <figcaption>Signal Grid</figcaption>
+    </figure>
+
+    <figure class="ud-video-card ud-video-card--tall" role="listitem">
+      <video class="ud-video-card__media" autoplay loop muted playsinline controls preload="metadata" poster="{f:uri.resource(path: 'EXT:theme_upside_down/Resources/Public/Media/portal-forest.svg')}" aria-label="Short ambient field footage loop">
+        <source src="{f:uri.resource(path: 'EXT:theme_upside_down/Resources/Public/Media/portal-loop.mp4')}" type="video/mp4" />
+      </video>
+      <figcaption>Field Footage Loop</figcaption>
+    </figure>
+
+    <figure class="ud-visual-card" role="listitem">
+      <f:image src="EXT:theme_upside_down/Resources/Public/Media/portal-forest.svg" alt="Dark forest silhouette around a bright dimensional portal" class="ud-visual-card__image" />
+      <figcaption>Portal Forest</figcaption>
+    </figure>
+
+    <figure class="ud-visual-card" role="listitem">
+      <f:image src="EXT:theme_upside_down/Resources/Public/Media/monitor-wall.svg" alt="Retro monitor wall showing signal traces" class="ud-visual-card__image" />
+      <figcaption>Monitor Wall</figcaption>
+    </figure>
+
+    <figure class="ud-visual-card" role="listitem">
+      <f:image src="EXT:theme_upside_down/Resources/Public/Media/evidence-board.svg" alt="Evidence board with linked notes" class="ud-visual-card__image" />
+      <figcaption>Evidence Board</figcaption>
+    </figure>
+  </div>
+</section>
+
+</html>

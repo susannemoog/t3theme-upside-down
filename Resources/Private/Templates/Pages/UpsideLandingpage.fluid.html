@@ -1,0 +1,117 @@
+<html
+        xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+        data-namespace-typo3-fluid="true"
+>
+
+<f:layout name="Pages/Default" />
+
+<f:section name="Main">
+    <a class="ud-skip-link" href="#ud-content">Skip to content</a>
+
+    <div class="ud-atmosphere" aria-hidden="true"></div>
+    <div class="ud-scanlines" aria-hidden="true"></div>
+
+    <header class="ud-header">
+        <div class="ud-shell">
+            <a href="{f:uri.page(pageUid: site.rootPageId)}" class="ud-brand">
+                <span class="ud-brand__title">The Upside Down</span>
+                <span class="ud-brand__subtitle">A TYPO3 Theme</span>
+            </a>
+            <nav class="ud-nav" aria-label="Main navigation">
+                <ul class="ud-nav__list">
+                    <f:for each="{mainMenu}" as="item">
+                        <li>
+                            <f:if condition="{item.active}">
+                                <f:then>
+                                    <a href="{item.link}" class="is-active" aria-current="page">{item.title}</a>
+                                </f:then>
+                                <f:else>
+                                    <a href="{item.link}">{item.title}</a>
+                                </f:else>
+                            </f:if>
+                        </li>
+                    </f:for>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="ud-content" class="ud-main">
+
+        <f:cObject typoscriptObjectPath="lib.dynamicContentRaw" data="{colPos: 1}" />
+
+        <f:cObject typoscriptObjectPath="lib.dynamicContentRaw" data="{colPos: 3}" />
+
+        <section class="ud-characters" aria-label="Hawkins residents field status">
+          <div class="ud-characters__header">
+            <p class="ud-characters__kicker">Hawkins Field Intel</p>
+            <h2 class="ud-characters__title">Residents: Current Status</h2>
+            <p class="ud-characters__desc">Known individuals of interest. Status reflects last confirmed contact with Hawkins field operatives. All data classified — clearance level 3 required.</p>
+          </div>
+          <div class="ud-character-grid">
+            <f:cObject typoscriptObjectPath="lib.dynamicContentRaw" data="{colPos: 30}" />
+          </div>
+        </section>
+
+        <section class="ud-locations" aria-label="Active investigation sites">
+          <div class="ud-locations__header">
+            <p class="ud-locations__kicker">Active Investigation Sites</p>
+            <h2 class="ud-locations__title">Hawkins: Known Breach Points</h2>
+            <p class="ud-locations__desc">Locations with confirmed or suspected interdimensional activity. Field operatives must exercise extreme caution. Threat levels updated as of last sweep.</p>
+          </div>
+          <div class="ud-location-grid" role="list">
+            <f:cObject typoscriptObjectPath="lib.dynamicContentRaw" data="{colPos: 40}" />
+          </div>
+        </section>
+
+        <section class="ud-accordion-section" aria-label="Hawkins incident reports">
+          <div class="ud-accordion-section__header">
+            <p class="ud-accordion-section__kicker">Declassified Archives</p>
+            <h2 class="ud-accordion-section__title">Hawkins Incident Reports</h2>
+            <p class="ud-accordion-section__desc">Field logs from documented Upside Down incursion events. Partially declassified under FOIA request #1983-HNL-7. Certain passages remain redacted pending ongoing investigation.</p>
+          </div>
+          <div class="ud-accordion" role="list">
+            <f:cObject typoscriptObjectPath="lib.dynamicContentRaw" data="{colPos: 50}" />
+          </div>
+        </section>
+
+        <section class="ud-slider-section" aria-label="Field reports and witness testimonials">
+          <div class="ud-slider-section__header">
+            <p class="ud-slider-section__kicker">Intercepted Transmissions</p>
+            <h2 class="ud-slider-section__title">Witness Testimonials</h2>
+            <p class="ud-slider-section__desc">Field reports and firsthand accounts recovered from Hawkins operatives and civilian witnesses. Authenticity verified. Some transcripts have been edited for clarity and brevity.</p>
+          </div>
+          <div class="ud-slider" aria-label="Testimonial slider">
+            <div class="ud-slider__track" role="list" aria-live="polite">
+              <f:cObject typoscriptObjectPath="lib.dynamicContentRaw" data="{colPos: 60}" />
+            </div>
+            <div class="ud-slider-controls" aria-label="Slider controls">
+              <button class="ud-slider__btn ud-slider__btn--prev" aria-label="Previous testimonial" disabled>&#9664;</button>
+              <button class="ud-slider__btn ud-slider__btn--next" aria-label="Next testimonial">&#9654;</button>
+            </div>
+          </div>
+        </section>
+
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: 2}" />
+
+        <section class="ud-shell ud-main-grid">
+            <div>
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: 0}" />
+            </div>
+            <aside>
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: 20}" />
+            </aside>
+        </section>
+
+    </main>
+
+    <footer class="ud-footer">
+        <div class="ud-shell">
+            <f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{colPos: 10}" />
+            <p class="ud-footer__tagline">The veil is thin. The signal persists.</p>
+            <p class="ud-footer__coords">39.4614° N, 86.1347° W &mdash; Hawkins, Indiana &mdash; Gate Status: Unknown</p>
+        </div>
+    </footer>
+</f:section>
+
+</html>

@@ -1,0 +1,20 @@
+categories:
+  upsideDown:
+    label: Upside Down theme
+
+settings:
+  upsideDown.colorScheme:
+    category: upsideDown
+    label: Color scheme
+    type: string
+    default: neon-void
+    enum:
+      neon-void: Neon Void
+      blood-sky: Blood Sky
+      ash-storm: Ash Storm
+
+  upsideDown.showAtmosphereFx:
+    category: upsideDown
+    label: Enable atmospheric background effects
+    type: bool
+    default: true

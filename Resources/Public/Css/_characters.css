@@ -1,0 +1,154 @@
+/* ─── Character Profile Grid ─── */
+
+.ud-characters {
+  width: min(100% - 3rem, var(--ud-shell));
+  margin-inline: auto;
+  margin-bottom: 0;
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+
+.ud-characters__header {
+  margin-bottom: 1.35rem;
+}
+
+.ud-characters__kicker {
+  color: var(--ud-signal);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.ud-characters__title {
+  margin: 0.3rem 0 0.6rem;
+  font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+  font-size: clamp(1.55rem, 3.2vw, 2.4rem);
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.ud-characters__desc {
+  color: var(--ud-text);
+  max-width: 65ch;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.ud-character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 1rem;
+}
+
+.ud-character-card {
+  position: relative;
+  background: var(--ud-surface);
+  border: 1px solid var(--ud-border);
+  border-top: 3px solid var(--ud-accent);
+  border-radius: var(--ud-radius);
+  padding: 1.6rem 1.4rem 1.4rem;
+  box-shadow: var(--ud-shadow);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  overflow: hidden;
+}
+
+.ud-character-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top center, rgb(45 191 176 / 4%), transparent 65%);
+  pointer-events: none;
+}
+
+.ud-character-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--ud-shadow), 0 0 28px rgb(196 28 53 / 12%);
+}
+
+/* Per-status accent colors */
+.ud-character-card[data-status="alive"] {
+  border-top-color: var(--ud-signal);
+}
+
+.ud-character-card[data-status="missing"] {
+  border-top-color: var(--ud-focus);
+}
+
+.ud-character-card[data-status="compromised"] {
+  border-top-color: var(--ud-accent);
+}
+
+.ud-character-card[data-status="unknown"] {
+  border-top-color: var(--ud-text-muted);
+}
+
+.ud-character-card__role {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ud-signal);
+  margin-bottom: 0.5rem;
+}
+
+.ud-character-card__name {
+  margin: 0 0 0.22rem;
+  font-family: "Fraunces", "Iowan Old Style", Georgia, serif;
+  font-size: 1.32rem;
+  line-height: 1.12;
+  color: var(--ud-text);
+}
+
+.ud-character-card__faction {
+  font-size: 0.76rem;
+  color: var(--ud-accent-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  margin-bottom: 0.75rem;
+}
+
+.ud-character-card__bio {
+  font-size: 0.86rem;
+  color: var(--ud-text-muted);
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.ud-character-card__status {
+  display: inline-block;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border: 1px solid currentColor;
+}
+
+.ud-status--alive {
+  color: var(--ud-signal);
+  background: rgb(72 214 195 / 10%);
+}
+
+.ud-status--missing {
+  color: var(--ud-focus);
+  background: rgb(255 224 138 / 10%);
+}
+
+.ud-status--compromised {
+  color: var(--ud-accent);
+  background: rgb(255 90 61 / 10%);
+}
+
+.ud-status--unknown {
+  color: var(--ud-text-muted);
+  background: rgb(198 210 221 / 8%);
+}
+
+@media (max-width: 52rem) {
+  .ud-character-grid {
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  }
+}

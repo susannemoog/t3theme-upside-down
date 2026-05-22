@@ -1,0 +1,35 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+
+<f:variable name="featuredClass">{f:if(condition: data.tx_themeupsidedown_location_featured, then: ' ud-location-card--featured')}</f:variable>
+
+<f:variable name="threatLabel">
+  <f:switch expression="{data.tx_themeupsidedown_location_threat}">
+    <f:case value="nominal">Nominal</f:case>
+    <f:case value="elevated">Elevated</f:case>
+    <f:case value="critical">Critical</f:case>
+    <f:defaultCase>{data.tx_themeupsidedown_location_threat}</f:defaultCase>
+  </f:switch>
+</f:variable>
+
+<article class="ud-location-card{featuredClass}" role="listitem" id="c{data.uid}">
+  <f:if condition="{files}">
+    <div class="ud-location-card__visual">
+      <f:image image="{files.0}" alt="{files.0.alternative}" />
+    </div>
+  </f:if>
+  <div class="ud-location-card__body">
+    <h3 class="ud-location-card__name">{data.header}</h3>
+    <f:if condition="{data.tx_themeupsidedown_location_coords}">
+      <code class="ud-location-card__coords">{data.tx_themeupsidedown_location_coords}</code>
+    </f:if>
+    <f:if condition="{data.bodytext}">
+      <p class="ud-location-card__desc">{data.bodytext}</p>
+    </f:if>
+    <span class="ud-location-card__threat ud-threat--{data.tx_themeupsidedown_location_threat}">{threatLabel}</span>
+  </div>
+</article>
+
+</html>

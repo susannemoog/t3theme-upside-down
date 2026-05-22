@@ -1,0 +1,41 @@
+@import 'EXT:theme_upside_down/Configuration/BackendLayouts/*.tsconfig'
+
+TCEFORM.tt_content {
+  CType.addItems.upside_storybeat = LLL:EXT:theme_upside_down/Resources/Private/Language/backend_fields.xlf:tt_content.CType.upside_storybeat.label
+  CType.addItems.upside_storybeat.group = upside_narrative
+  CType.addItems.upside_hero = LLL:EXT:theme_upside_down/Resources/Private/Language/backend_fields.xlf:tt_content.CType.upside_hero.label
+  CType.addItems.upside_hero.group = upside_narrative
+  CType.addItems.upside_featured = LLL:EXT:theme_upside_down/Resources/Private/Language/backend_fields.xlf:tt_content.CType.upside_featured.label
+  CType.addItems.upside_featured.group = upside_narrative
+  CType.addItems.upside_character = LLL:EXT:theme_upside_down/Resources/Private/Language/backend_fields.xlf:tt_content.CType.upside_character.label
+  CType.addItems.upside_character.group = upside_narrative
+  CType.addItems.upside_location = LLL:EXT:theme_upside_down/Resources/Private/Language/backend_fields.xlf:tt_content.CType.upside_location.label
+  CType.addItems.upside_location.group = upside_narrative
+  CType.addItems.upside_incident = LLL:EXT:theme_upside_down/Resources/Private/Language/backend_fields.xlf:tt_content.CType.upside_incident.label
+  CType.addItems.upside_incident.group = upside_narrative
+  CType.addItems.upside_testimonial = LLL:EXT:theme_upside_down/Resources/Private/Language/backend_fields.xlf:tt_content.CType.upside_testimonial.label
+  CType.addItems.upside_testimonial.group = upside_narrative
+
+  frame_class.label = LLL:EXT:theme_upside_down/Resources/Private/Language/backend_fields.xlf:tt_content.frame_class.label
+  frame_class.keepItems = default,bg-dark,bg-crimson,bg-void
+  frame_class.altLabels.default = LLL:EXT:theme_upside_down/Resources/Private/Language/backend_fields.xlf:tt_content.frame_class.default
+  frame_class.addItems.bg-dark = LLL:EXT:theme_upside_down/Resources/Private/Language/backend_fields.xlf:tt_content.frame_class.bg_dark
+  frame_class.addItems.bg-crimson = LLL:EXT:theme_upside_down/Resources/Private/Language/backend_fields.xlf:tt_content.frame_class.bg_crimson
+  frame_class.addItems.bg-void = LLL:EXT:theme_upside_down/Resources/Private/Language/backend_fields.xlf:tt_content.frame_class.bg_void
+
+  # Story Beat gets its two extra variants on top of the shared set
+  types.upside_storybeat.frame_class.keepItems = default,bg-dark,bg-crimson,bg-void,classified,transmission
+}
+
+mod.wizards.newContentElement.wizardItems.upside_narrative {
+  header = LLL:EXT:theme_upside_down/Resources/Private/Language/backend_fields.xlf:tt_content.group.upside_narrative
+  show = upside_storybeat,upside_hero,upside_featured,upside_character,upside_location,upside_incident,upside_testimonial
+}
+
+mod.web_layout.tt_content.preview.upside_storybeat    = EXT:theme_upside_down/Resources/Private/Templates/ContentPreviews/UpsideStorybeat.fluid.html
+mod.web_layout.tt_content.preview.upside_hero         = EXT:theme_upside_down/Resources/Private/Templates/ContentPreviews/UpsideHero.fluid.html
+mod.web_layout.tt_content.preview.upside_featured     = EXT:theme_upside_down/Resources/Private/Templates/ContentPreviews/UpsideFeatured.fluid.html
+mod.web_layout.tt_content.preview.upside_character    = EXT:theme_upside_down/Resources/Private/Templates/ContentPreviews/UpsideCharacter.fluid.html
+mod.web_layout.tt_content.preview.upside_location     = EXT:theme_upside_down/Resources/Private/Templates/ContentPreviews/UpsideLocation.fluid.html
+mod.web_layout.tt_content.preview.upside_incident     = EXT:theme_upside_down/Resources/Private/Templates/ContentPreviews/UpsideIncident.fluid.html
+mod.web_layout.tt_content.preview.upside_testimonial  = EXT:theme_upside_down/Resources/Private/Templates/ContentPreviews/UpsideTestimonial.fluid.html

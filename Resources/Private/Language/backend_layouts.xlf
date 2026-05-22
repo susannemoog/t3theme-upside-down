@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="EXT:theme_upside_down/Resources/Private/Language/backend_layouts.xlf" date="2026-04-13T00:00:00Z" product-name="theme_upside_down">
+    <header/>
+    <body>
+      <trans-unit id="backend_layout.upside_contentpage.title">
+        <source>Upside Down: Content Page</source>
+      </trans-unit>
+      <trans-unit id="backend_layout.upside_landingpage.title">
+        <source>Upside Down: Landing Page</source>
+      </trans-unit>
+      <trans-unit id="backend_layout.colpos.stage">
+        <source>Stage</source>
+      </trans-unit>
+      <trans-unit id="backend_layout.colpos.main">
+        <source>Main Content</source>
+      </trans-unit>
+      <trans-unit id="backend_layout.colpos.signal">
+        <source>Signal Column</source>
+      </trans-unit>
+      <trans-unit id="backend_layout.colpos.footer">
+        <source>Footer</source>
+      </trans-unit>
+      <trans-unit id="backend_layout.colpos.portal">
+        <source>Portal</source>
+      </trans-unit>
+      <trans-unit id="backend_layout.colpos.hero">
+        <source>Hero</source>
+      </trans-unit>
+      <trans-unit id="backend_layout.colpos.featured">
+        <source>Featured Dispatch</source>
+      </trans-unit>
+      <trans-unit id="backend_layout.colpos.characters">
+        <source>Characters</source>
+      </trans-unit>
+      <trans-unit id="backend_layout.colpos.locations">
+        <source>Breach Points</source>
+      </trans-unit>
+      <trans-unit id="backend_layout.colpos.incidents">
+        <source>Incident Archive</source>
+      </trans-unit>
+      <trans-unit id="backend_layout.colpos.testimonials">
+        <source>Testimonials</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

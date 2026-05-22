@@ -1,0 +1,22 @@
+/* Loaded only in TYPO3 backend page-module previews.
+   Imports tokens + component CSS only — no global base/layout overrides. */
+@import "./_tokens.css";
+@import "./_characters.css";
+@import "./_locations.css";
+@import "./_accordion.css";
+@import "./_slider.css";
+@import "./_storybeat.css";
+@import "./_content.css";
+
+/* Ensure the Google Fonts used by the theme are available in previews */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&display=swap');
+
+/* Prevent component styles from bleeding into backend navigation */
+.ud-character-card,
+.ud-location-card,
+.ud-accordion__item,
+.ud-slider__item,
+.ud-storybeat,
+.ud-featured__card {
+  font-family: system-ui, sans-serif;
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="t d">
+  <title id="t">Radio Scan</title>
+  <desc id="d">Retro radio scanner interface with waveforms and dial markings.</desc>
+  <rect width="1200" height="700" fill="#101820"/>
+  <rect x="90" y="120" width="1020" height="460" rx="28" fill="#17242e" stroke="#2d4357" stroke-width="8"/>
+  <g stroke="#355062" stroke-width="2" opacity="0.6">
+    <path d="M170 230H1030M170 290H1030M170 350H1030M170 410H1030M170 470H1030"/>
+    <path d="M220 190V510M340 190V510M460 190V510M580 190V510M700 190V510M820 190V510M940 190V510"/>
+  </g>
+  <g fill="none" stroke="#48d6c3" stroke-width="6" stroke-linecap="round">
+    <path d="M160 410C240 330 280 460 360 360C440 250 500 440 590 310C650 220 730 430 810 330C880 245 960 350 1040 280"/>
+    <path d="M160 470C260 430 330 500 430 455C530 410 600 490 700 440C780 400 890 470 1040 430" opacity="0.7"/>
+  </g>
+  <circle cx="965" cy="250" r="48" fill="#0f1921" stroke="#ff8e75" stroke-width="8"/>
+  <circle cx="965" cy="250" r="12" fill="#ff8e75"/>
+</svg>

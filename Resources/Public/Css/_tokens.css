@@ -1,0 +1,46 @@
+:root {
+  --ud-bg: #06090d;
+  --ud-bg-elevated: #0b1118;
+  --ud-surface: #0f1c27;
+  --ud-surface-strong: #162535;
+  --ud-text: #e8eff6;
+  --ud-text-muted: #d3dbff;
+  --ud-accent: #c41c35;
+  --ud-accent-soft: #e84055;
+  --ud-signal: #2dbfb0;
+  --ud-link: #5dd8cc;
+  --ud-link-hover: #95eae4;
+  --ud-focus: #f5c842;
+  --ud-border: #1a2d3e;
+  --ud-border-strong: #243d52;
+  --ud-glow: 0 0 40px rgb(45 191 176 / 10%);
+  --ud-glow-strong: 0 0 60px rgb(45 191 176 / 20%), 0 0 16px rgb(45 191 176 / 30%);
+  --ud-glow-red: 0 0 48px rgb(196 28 53 / 20%), 0 0 12px rgb(196 28 53 / 28%);
+  --ud-shadow: 0 20px 60px rgb(0 0 0 / 55%);
+  --ud-shell: 78rem;
+  --ud-radius: 0.75rem;
+  --ud-radius-sm: 0.5rem;
+  --ud-scanline: rgb(255 255 255 / 1%);
+  --ud-vine: rgb(45 191 176 / 18%);
+  --ud-font-display: "Abril Fatface", "ITC Benguiat", "Fraunces", Georgia, serif;
+}
+
+body.theme-upside-down.blood-sky {
+  --ud-bg: #160e12;
+  --ud-bg-elevated: #20151a;
+  --ud-surface: #2a1a20;
+  --ud-accent: #c01530;
+  --ud-accent-soft: #e03850;
+  --ud-signal: #28b8a8;
+  --ud-border: #3d2530;
+}
+
+body.theme-upside-down.ash-storm {
+  --ud-bg: #121418;
+  --ud-bg-elevated: #1a1f26;
+  --ud-surface: #232c35;
+  --ud-accent: #c82038;
+  --ud-accent-soft: #e84858;
+  --ud-signal: #30c0b0;
+  --ud-border: #2e3f52;
+}

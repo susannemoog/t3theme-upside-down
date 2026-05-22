@@ -1,0 +1,23 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+
+<f:if condition="{title}">
+  <section class="ud-hero">
+    <div class="ud-shell">
+      <p class="ud-hero__kicker">Hawkins Transmission</p>
+      <h1 class="ud-hero__title">{title}</h1>
+      <f:if condition="{subtitle}">
+        <p class="ud-hero__subtitle">{subtitle}</p>
+      </f:if>
+      <ul class="ud-hero__pills" aria-label="Threat indicators">
+        <li>Signal Active</li>
+        <li>Breach Detected</li>
+        <li>Level 6 Threat</li>
+      </ul>
+    </div>
+  </section>
+</f:if>
+
+</html>

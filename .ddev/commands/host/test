@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+## Description: Run Playwright E2E tests
+## Usage: test [args]
+## Example: "ddev test\nddev test --grep 'Hero'"
+
+set -euo pipefail
+
+exec docker exec -it "ddev-${DDEV_SITENAME}-playwright" npx playwright test "$@"

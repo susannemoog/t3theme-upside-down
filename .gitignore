@@ -1,0 +1,33 @@
+# TYPO3 runtime environment (managed by setup-typo3.sh)
+Build/
+
+# Composer artifacts at repo root (safety net)
+/vendor/
+composer.lock
+
+# DDEV local overrides
+/.ddev/config.local.yaml
+/.ddev/.webimageBuild/
+/.ddev/.homeadditions/
+/.ddev/db_snapshots/
+/.ddev/.ddev-docker-compose-full.yaml
+
+# Composer auth (may contain tokens)
+/auth.json
+
+# Node / Playwright artefacts
+/node_modules/
+/package-lock.json
+/playwright-report/
+/test-results/
+/blob-report/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="t d">
+  <title id="t">Lab Interior</title>
+  <desc id="d">Futuristic corridor with illuminated panels and perspective lines.</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#13212c"/>
+      <stop offset="100%" stop-color="#0a1219"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#wall)"/>
+  <g stroke="#294154" stroke-width="3" fill="none" opacity="0.85">
+    <path d="M200 0L420 700"/>
+    <path d="M1000 0L780 700"/>
+    <path d="M0 120H1200"/>
+    <path d="M0 260H1200"/>
+    <path d="M0 420H1200"/>
+    <path d="M0 580H1200"/>
+  </g>
+  <g fill="#48d6c3" opacity="0.85">
+    <rect x="90" y="90" width="140" height="22" rx="6"/>
+    <rect x="970" y="90" width="140" height="22" rx="6"/>
+    <rect x="130" y="360" width="120" height="18" rx="5"/>
+    <rect x="950" y="360" width="120" height="18" rx="5"/>
+  </g>
+  <circle cx="600" cy="350" r="90" fill="#ff8e75" opacity="0.2"/>
+  <circle cx="600" cy="350" r="46" fill="#83f0e2" opacity="0.45"/>
+</svg>

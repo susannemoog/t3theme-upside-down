@@ -1,0 +1,32 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+
+<section class="ud-landing-hero" aria-label="Site introduction">
+
+  <div class="ud-landing-hero__rift" aria-hidden="true">
+    <f:image src="EXT:theme_upside_down/Resources/Public/Media/gate-rift.svg" alt="" />
+  </div>
+
+  <div class="ud-landing-hero__inner">
+    <f:if condition="{data.header}">
+      <p class="ud-landing-hero__eyebrow">{data.header}</p>
+    </f:if>
+    <f:if condition="{data.subheader}">
+      <h1 class="ud-landing-hero__title">{data.subheader}</h1>
+    </f:if>
+    <f:if condition="{data.bodytext}">
+      <p class="ud-landing-hero__subtitle">{data.bodytext}</p>
+    </f:if>
+  </div>
+
+  <a class="ud-landing-hero__scroll" href="#ud-dispatch" aria-label="Scroll to content">
+    <span class="ud-landing-hero__scroll-dot"></span>
+    <span class="ud-landing-hero__scroll-dot"></span>
+    <span class="ud-landing-hero__scroll-dot"></span>
+  </a>
+
+</section>
+
+</html>

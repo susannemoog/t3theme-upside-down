@@ -1,0 +1,64 @@
+<html
+        xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+        data-namespace-typo3-fluid="true"
+>
+
+<f:layout name="Pages/Default" />
+
+<f:section name="Main">
+    <a class="ud-skip-link" href="#ud-content">Skip to content</a>
+
+    <div class="ud-atmosphere" aria-hidden="true"></div>
+    <div class="ud-scanlines" aria-hidden="true"></div>
+
+    <header class="ud-header">
+        <div class="ud-shell">
+            <a href="{f:uri.page(pageUid: site.rootPageId)}" class="ud-brand">
+                <span class="ud-brand__title">The Upside Down</span>
+                <span class="ud-brand__subtitle">A TYPO3 Theme</span>
+            </a>
+            <nav class="ud-nav" aria-label="Main navigation">
+                <ul class="ud-nav__list">
+                    <f:for each="{mainMenu}" as="item">
+                        <li>
+                            <f:if condition="{item.active}">
+                                <f:then>
+                                    <a href="{item.link}" class="is-active" aria-current="page">{item.title}</a>
+                                </f:then>
+                                <f:else>
+                                    <a href="{item.link}">{item.title}</a>
+                                </f:else>
+                            </f:if>
+                        </li>
+                    </f:for>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="ud-content" class="ud-main">
+        <f:render partial="Components/SectionHeader" arguments="{title: data.title, subtitle: data.subtitle}" />
+
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: 2}" />
+
+        <section class="ud-shell ud-main-grid">
+            <div>
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: 0}" />
+            </div>
+            <aside>
+                <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: 20}" />
+            </aside>
+        </section>
+
+    </main>
+
+    <footer class="ud-footer">
+        <div class="ud-shell">
+            <f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{colPos: 10}" />
+            <p class="ud-footer__tagline">The veil is thin. The signal persists.</p>
+            <p class="ud-footer__coords">39.4614° N, 86.1347° W &mdash; Hawkins, Indiana &mdash; Gate Status: Unknown</p>
+        </div>
+    </footer>
+</f:section>
+
+</html>
