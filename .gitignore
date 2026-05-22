@@ -17,6 +17,7 @@ composer.lock
 
 # Node / Playwright artefacts
 /node_modules/
+/.playwright-auth.json
 /package-lock.json
 /playwright-report/
 /test-results/
