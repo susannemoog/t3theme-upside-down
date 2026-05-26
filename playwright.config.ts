@@ -1,7 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
 
-const authFile = '.playwright-auth.json';
-
 export default defineConfig({
   testDir: './Tests/playwright/specs',
   timeout: 30_000,
@@ -17,20 +15,8 @@ export default defineConfig({
   },
   projects: [
     {
-      name: 'setup',
-      testDir: './Tests/playwright',
-      testMatch: /auth\.setup\.ts/,
-    },
-    {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-      dependencies: [],
-    },
-    {
-      name: 'chromium-backend',
-      use: { ...devices['Desktop Chrome'], storageState: authFile },
-      dependencies: ['setup'],
-      testMatch: /backend-.*\.spec\.ts/,
     },
   ],
 });
