@@ -23,6 +23,10 @@ web_environment:
   - TYPO3_SETUP_ADMIN_USERNAME=admin
   - TYPO3_SETUP_ADMIN_PASSWORD=Password.1
   - TYPO3_SETUP_ADMIN_EMAIL=admin@example.com
+  # Backend login branding (override in config.local.yaml or .ddev/.env)
+  - TYPO3_BE_LOGIN_LOGO=EXT:theme_upside_down/Resources/Public/Media/gate-rift.svg
+  - TYPO3_BE_LOGIN_BG_IMAGE=EXT:theme_upside_down/Resources/Public/Media/portal-forest.svg
+  - TYPO3_BE_LOGIN_HIGHLIGHT_COLOR=#b52b2b
 
 hooks:
   post-start:

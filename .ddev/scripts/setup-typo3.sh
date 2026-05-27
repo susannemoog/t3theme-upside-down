@@ -98,6 +98,17 @@ if (getenv('IS_DDEV_PROJECT') === 'true') {
             ],
         ]
     );
+
+    // Backend login branding — controlled via DDEV web_environment vars
+    // (override in .ddev/config.local.yaml or .ddev/.env)
+    $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['backend'] = array_replace(
+        $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['backend'] ?? [],
+        array_filter([
+            'loginLogo'            => getenv('TYPO3_BE_LOGIN_LOGO') ?: '',
+            'loginBackgroundImage' => getenv('TYPO3_BE_LOGIN_BG_IMAGE') ?: '',
+            'loginHighlightColor'  => getenv('TYPO3_BE_LOGIN_HIGHLIGHT_COLOR') ?: '',
+        ])
+    );
 }
 ADDITIONAL_PHP
 
